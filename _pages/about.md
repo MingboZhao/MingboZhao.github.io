@@ -27,16 +27,11 @@ I am looking for PhD students, Postdocs, and Research Assistants. If you are int
 Research Interests
 ======
 My research interests are Artificial Intelligence and Deep Learning. Some specific research topics of mine are as follows:
-* Matrix and tensor methods
-* Algorithms for missing data, outlier, and noise
-* Recommendation system
-* Automated machine learning
-* Clustering algorithms
-* Learning with graphs
-* Privacy and fairness in machine learning
-* Non-smooth optimization
-* Anomaly/novelty/fault detection
-* Machine learning for bioinformatics and healthcare
+* Artificial Intelligence for Smart Fashion
+* Multimedia Sensing and Computing 
+* Deep Learning on Medical Image Analysis
+* Multimodal Information Retrieval
+* Visual and Language Model for Navigation and Manipulation
 
 See the examples on the "Research" page.
 
@@ -79,28 +74,35 @@ See the examples on the "Research" page.
 Research Funds
 ======
 
-* NSFC Youth Fund Programme (国自然青年项目), 2022.01-2024.12, PI.
-* General Program of Natural Science Foundation of Guangdong Province (广东省面上项目), 2024.01-2026.12, PI.
-* NSFC General Programme (国自然面上项目), 2024.01-2027.12, PI.
+* National Natural Science Foundation of China (NSFC) Young Scientists Program (国家自然科学基金青年项目), 2017.01-2019.12, PI,
+* Fundamental Research Funds for the Central Universities (中央高校基本科研业务费专项资金项目), 2017.01-2019.12, PI,
+* The National Key Research and Development Program (国家重点研发计划子课题), 2020.01-2022.12, Participation,
+* National Natural Science Foundation of China (NSFC) General Program (国家自然科学基金面上项目), 2020.01-2023.12, PI,
+* Guangdong Key Scientific Research Platform and Projects for Higher-educational Institutions, 2023.01-2024.12, PI.
 
   
 Academia Services
 ======
 
-* Associate Editor of Pattern Recognition
-* Associate Editor of Neural Processing Letters
 * Senior Member of IEEE
-* Conference PC Member: COLT, AISTATS, NeurIPS, ICLR, ICML, CVPR, AAAI, KDD, IJCAI
-* Journal Reviewer: IEEE TNNLS/TII/TSP/TIP/TPAMI/TKDE, Pattern Recognition, SIAM Journal on Mathematics of Data Science, Mathematical Programming, Journal of Scientific Computing, etc.
+* Senior Member of CCF
+* Associate Editor of IEEE Trans. on Consumer Electronics
+* Associate Editor of IEEE Trans. on Industrial Informatics
+* Associate Editor of IEEE Access
+* Associate Editor of International Journal of Pattern Recognition and Artificial Intelligence
+* Senior Program Committee Member for IJCAI 2025
+* Senior Program Member for AAAI (2025/2024/2023/2022)
+* Area Chair for ACM Multimedia (2023/2022/2021)
 
-
+<!--
 Honors and Awards
 ======
 * First Prize of the Natural Science Award of Chinese Association of Automation, 2023.10
 * CityU Outstanding Academic Performance Award / Research Tuition Scholarship, 2017.08
 * Outstanding graduates of Beijing University of Chemical Technology (5%), 2013.06
 * Excellent master's thesis award of Beijing University of Chemical Technology (5%), 2013.06
-* Zhang Zhong-Jun Academician Outstanding Paper Award (1%), 2012.08	
+* Zhang Zhong-Jun Academician Outstanding Paper Award (1%), 2012.08
+-->
 
 
 
