@@ -7,13 +7,13 @@
 classes: wide
 # Site Settings
 locale                   : "en-US"
-title                    : "Jicong Fan's Personal Site"
+title                    : "Mingbo Zhao's Personal Site"
 title_separator          : "-"
-name                     : &name "Jicong Fan"
+name                     : &name "Mingbo Zhao"
 description              : &description "personal description"
-url                      : https://jicongfan.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://zmbman.github.io/MingboZhao.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "jicongfan/jicongfan.github.io"
+repository               : "https://zmbman.github.io/MingboZhao.github.io/"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 seo_description          : "-"
@@ -79,14 +79,14 @@ social:
 
 # Site Author
 author:
-  name             : "Jicong Fan"
+  name             : "Mingbo Zhao"
   avatar           : "profile.png"
-  bio              : "Assistant Professor, CUHK-Shenzhen"
-  location         : "Shenzhen, China"
+  bio              : "Professor, Donghua University"
+  location         : "Shanghai, China"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=vdJsnhIAAAAJ&hl=en"
-  email            : fanjicong[AT]cuhk[DOT]edu[DOT]cn
+  googlescholar    : "https://scholar.google.com/citations?user=3X2iuacAAAAJ&hl=en"
+  email            : mzhao4[AT]dhu[DOT]edu[DOT]cn
   researchgate     : 
   uri              :
   bitbucket        :
@@ -95,7 +95,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "jicongfan"
+  github           : "zmbman"
   google_plus      :
   keybase          :
   instagram        :
