@@ -28,7 +28,6 @@ Research Interests
 ======
 My research interests are Artificial Intelligence and Deep Learning. Some specific research topics of mine are as follows:
 * Artificial Intelligence for Smart Fashion
-* Multimedia Sensing and Computing 
 * Deep Learning on Medical Image Analysis
 * Multimodal Information Retrieval
 * Visual and Language Model for Navigation and Manipulation
@@ -90,6 +89,9 @@ Academia Services
 * Associate Editor of IEEE Trans. on Industrial Informatics
 * Associate Editor of IEEE Access
 * Associate Editor of International Journal of Pattern Recognition and Artificial Intelligence
+* Lead Guest Editor for Special Issue of IEEE Trans. on Consumer Electronics: Generative Artificial Intelligence (AI) and Its Applications to Consumer Electronics, 2023
+* Lead Guest Editor for Special Issue of IEEE Trans. on Consumer Electronics: Multimedia Sensing and Computing for Consumer Electronics, 2022
+* Lead Guest Editor for the Special Issue of Neural Computing and Applications: New Trends of Neural Computing for Advanced Applications 2020
 * Senior Program Committee Member for IJCAI 2025
 * Senior Program Member for AAAI (2025/2024/2023/2022)
 * Area Chair for ACM Multimedia (2023/2022/2021)
