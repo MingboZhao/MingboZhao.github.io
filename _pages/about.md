@@ -8,27 +8,23 @@ redirect_from:
   - /about.html
 ---
 
-赵鸣博教授现为东华大学信息科学与技术学院教授、博导。他于2013年2月在香港城市大学电子工程系计算机工程专业获得博士学位，后继续在香港城市大学从事博士后研究，2016年7月加入东华大学信息科学与技术学院，并分别于2005年和2008年在山西大学物理电子工程学院（双一流专业）获得硕士和学士学位。他的研究方向是人工智能和深度学习，在特征提取、深度学习、信息检索等方面做了大量研究工作，在人工智能主流期刊和会议上发表论文80余篇，著书章节2篇，授权美国发明专利1项，授权国内发明专利5项，主持国家自然科学基金面上项目等科研项目3项，作为骨干参与国家科技重大科技专项1项。到目前为止，Google-scholar引用为4000余次，H-index为33。在国内外具有一定的影响力。在学术兼职方面，主要包括： IEEE高级会员（2019.8-现在, no. 91255912, Shanghai Section），中国计算机协会CCF高级会员（2021.9-现在，no. 67267S），中国计算机学会人工智能与模式识别专委会委员、中国人工智能学会模式识别专委会委员、中国自动化学会成立模式识别与机器智能专委会委员。担任SCI期刊IEEE Trans. on Consumer Electronics、IEEE Trans. on Industrial Informatics、SCI模式识别与人工智能国际期刊International Journal of Pattern Recognition and Artificial Intelligence副主编，北大核心期刊《计算机工程》编委。担任Lead Guest Editor（首席特刊编委）for Special Issue of IEEE Trans. on Consumer Electronics: Generative Artificial Intelligence (AI) and Its Applications to Consumer Electronics, 2023，Lead Guest Editor（首席特刊编委）for Special Issue of IEEE Trans. on Consumer Electronics: Multimedia Sensing and Computing for Consumer Electronics, 2022，Lead Guest Editor（首席特刊编委）for the Special Issue of Neural Computing and Applications: New Trends of Neural Computing for Advanced Applications 2020。担任国际人工智能大会AAAI 2025/2024/2023/2022 Senior Program Member（高级程序委员会委员）、国际人工智能联合会议IJCAI 2025高级程序委员会委员、国际多媒体领域大会ACM Multimedia 2023/2022/2021领域主席（Area Chair），以及多个国际会议的程序委员会委员以及主流期刊审稿人。
+赵鸣博教授现为东华大学信息科学与技术学院教授、博导。他于2013年2月在香港城市大学电子工程系计算机工程专业获得博士学位，后继续在香港城市大学从事博士后研究，2016年7月加入东华大学信息科学与技术学院，并分别于2005年和2008年在山西大学物理电子工程学院（双一流专业）获得硕士和学士学位。他的研究方向是人工智能和深度学习，在特征提取、深度学习、信息检索等方面做了大量研究工作，在人工智能主流期刊和会议上发表论文80余篇，著书章节2篇，授权美国发明专利1项，授权国内发明专利5项，主持国家自然科学基金面上项目等科研项目3项，作为骨干参与国家科技重大科技专项1项。到目前为止，Google Scholar引用为4000余次，H-index为33。在国内外具有一定的影响力。在学术兼职方面，主要包括： IEEE高级会员、中国计算机协会CCF高级会员、中国计算机学会人工智能与模式识别专委会委员、中国人工智能学会模式识别专委会委员、中国中文信息学会大模型与生成专业委员会委员。担任SCI期刊IEEE Trans. on Consumer Electronics、IEEE Trans. on Industrial Informatics、International Journal of Pattern Recognition and Artificial Intelligence副主编，北大核心期刊《计算机工程》编委。担任国际人工智能大会AAAI 2025/2024/2023/2022 Senior Program Member（高级程序委员会委员）、国际人工智能联合会议IJCAI 2025高级程序委员会委员、国际多媒体领域大会ACM Multimedia 2023/2022/2021领域主席（Area Chair），以及多个国际会议的程序委员会委员以及主流期刊审稿人。
 
 赵老师目前招收博士生、硕士生，感兴趣的同学请发送简历到邮箱。一些要求如下：
-* <strong>博士生</strong> 要求诚实守信、工作认真负责。优先考虑满足以下条件的同学（本科或硕士）：以第一作者身份发表过CCFA/B类论文或在人工智能等相关领域取得同等水平的研究成果（若为硕士毕业生，该条件必须满足）。。
-* <strong>硕士生</strong> 要求诚实守信、工作认真负责，具备较强的动手能力，并曾参加学科竞赛并取得优异成绩。
+* <strong>博士生</strong>：要求诚实守信、工作认真负责。优先考虑满足以下条件的同学（本科或硕士）：以第一作者身份发表过CCFA/B类论文或在人工智能等相关领域取得同等水平的研究成果（若为硕士毕业生，该条件必须满足）。
+* <strong>硕士生</strong>：要求诚实守信、工作认真负责，具备较强的动手能力，曾参加学科竞赛并取得优异成绩，若有论文发表经验者更佳。
 
 ---
 
 Professor Zhao Mingbo is currently a professor and doctoral supervisor at the School of Information Science and Technology, Donghua University. He received his Ph.D. in Computer Engineering from the Department of Electronic Engineering at City University of Hong Kong in February 2013, and continued his postdoctoral research at City University of Hong Kong. In July 2016, he joined Donghua University. He obtained his Master's and Bachelor's degrees from the College of Physical Electronics and Engineering at Shanxi University (a Double First-Class discipline) in 2005 and 2008, respectively. His research focuses on Artificial Intelligence and Deep Learning, with significant contributions in feature extraction, deep learning, and information retrieval. He has published over 80 papers in leading AI journals and conferences, authored 2 book chapters, holds one U.S. patent and five domestic invention patents, and has led three research projects, including a National Natural Science Foundation of China project. He also played a key role in a major national science and technology project. To date, his work has been cited over 4,000 times on Google Scholar, with an H-index of 33. He is well-recognized both domestically and internationally.
 
-His academic service includes being a Senior Member of IEEE (2019–present, No. 91255912, Shanghai Section), a Senior Member of the China Computer Federation (CCF) (2021–present, No. 67267S), a member of the CCF Artificial Intelligence and Pattern Recognition Committee, a member of the Pattern Recognition Committee of the Chinese Association for Artificial Intelligence, and a member of the Pattern Recognition and Machine Intelligence Committee of the Chinese Association of Automation. He serves as an Associate Editor for SCI journals such as IEEE Transactions on Consumer Electronics, IEEE Transactions on Industrial Informatics, and the International Journal of Pattern Recognition and Artificial Intelligence. He is also an editorial board member for the Chinese core journal "Computer Engineering."
-
-He has served as the Lead Guest Editor for several special issues, including the Special Issue on "Generative Artificial Intelligence (AI) and Its Applications to Consumer Electronics" for IEEE Transactions on Consumer Electronics (2023), the Special Issue on "Multimedia Sensing and Computing for Consumer Electronics" (2022), and the Special Issue on "New Trends of Neural Computing for Advanced Applications" for Neural Computing and Applications (2020).
-
-Additionally, he is a Senior Program Member for AAAI (2025/2024/2023/2022), a Senior Program Committee Member for IJCAI 2025, an Area Chair for ACM Multimedia (2023/2022/2021), and serves on the program committees of numerous international conferences and as a reviewer for leading journals.
+His academic service includes being a Senior Member of IEEE, a Senior Member of the China Computer Federation (CCF), a member of the CCF Artificial Intelligence and Pattern Recognition Committee, a member of the Pattern Recognition Committee of the Chinese Association for Artificial Intelligence, and a Member of the Large Model and Generative Special Committee of the China Chinese Information Society. He serves as Associate Editors for several SCI journals such as IEEE Transactions on Consumer Electronics, IEEE Transactions on Industrial Informatics, and the International Journal of Pattern Recognition and Artificial Intelligence. He is also an editorial board member for the Chinese core journal "Computer Engineering." Additionally, he is a Senior Program Member for AAAI (2025/2024/2023/2022), a Senior Program Committee Member for IJCAI 2025, an Area Chair for ACM Multimedia (2023/2022/2021), and serves on the program committees of numerous international conferences and as a reviewer for leading journals.
 
 I am looking for PhD students, Postdocs, and Research Assistants. If you are interested in these positions, please send me your CV/resume. For PhD or Postdoc, please also send me your research plan.
 
 Research Interests
 ======
-My research interests are Artificial Intelligence and Machine Learning. Some specific research topics of mine are as follows:
+My research interests are Artificial Intelligence and Deep Learning. Some specific research topics of mine are as follows:
 * Matrix and tensor methods
 * Algorithms for missing data, outlier, and noise
 * Recommendation system
@@ -42,7 +38,7 @@ My research interests are Artificial Intelligence and Machine Learning. Some spe
 
 See the examples on the "Research" page.
 
-Selected Publications <font size=3>(* indicates corresponding author)</font>
+<!--Selected Publications <font size=3>(* indicates corresponding author)</font>
 ======
 
 * Liangqi Xie, <strong>Jicong Fan</strong>*. Multi-Subspace Matrix Recovery from Permuted Data. Accepted by <font color=DarkBlue>AAAI 2025</font>. <a href="https://arxiv.org/pdf/2412.12931">[PDF]</a>
@@ -76,7 +72,8 @@ Selected Publications <font size=3>(* indicates corresponding author)</font>
 * <strong>Jicong Fan</strong>, Tommy W.S. Chow. Exactly robust kernel principal component analysis. <font color=DarkBlue>IEEE TNNLS 2020</font>. <a href="https://ieeexplore.ieee.org/abstract/document/8701558">[PDF]</a>
 * <strong>Jicong Fan</strong>*, Jieyu Cheng. Matrix completion by deep matrix factorization. <font color=DarkBlue>Neural Networks 2018</font>. <a href="https://www.sciencedirect.com/science/article/pii/S0925231217309621">[PDF]</a>
 * <strong>Jicong Fan</strong>, Tommy W.S. Chow. Matrix completion by least-square, low-rank, and sparse self-representations. <font color=DarkBlue>Pattern Recognition 2017.</font> <a href="https://www.sciencedirect.com/science/article/pii/S0031320317302030">[PDF]</a>
-  
+-->
+
 Research Funds
 ======
 
