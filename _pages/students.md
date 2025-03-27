@@ -1,11 +1,10 @@
 ---
 permalink: /students/
-title: "Students and their research output"
+title: "Students"
 author_profile: true
 ---
 他很懒，什么也没有留下。
 <!--
-
 - PhD students
 	- Ziheng Sun (from Zhejiang University) 2020 Autumn (1 NeurIPS, 1 ICML)
 	- Dong Qiao (from Central South University) 2021 Autumn (1 NeurIPS, 1 AAAI)
