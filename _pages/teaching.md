@@ -3,9 +3,10 @@ permalink: /teaching/
 title: "Teaching"
 author_profile: true
 ---
+* 人工智能导论：秋季
+* 自然语言处理：秋季
 
-
-
+<!--
 ##  DDA4210 Advanced Machine Learning
 #### Syllabus
    * Introduction and review
@@ -39,6 +40,6 @@ author_profile: true
    * K-means, Gaussian mixture models
    * Expectation Maximization 
    * PCA 
-    
+-->
 
 
