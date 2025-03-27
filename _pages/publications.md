@@ -5,7 +5,8 @@ author_profile: true
 ---
 
 他很懒，什么都没留下。
-<!-- <strong>Preprint</strong>
+<!-- 
+<strong>Preprint</strong>
 
 
 1. Zixiao Wang, Dong Qiao, <strong>Jicong Fan</strong>*. Spectral Clustering for Discrete Distributions. <a href="https://arxiv.org/pdf/2401.13913">[PDF]</a>
