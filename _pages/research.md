@@ -5,6 +5,9 @@ author_profile: true
 
 ---
 
+他很懒，什么都没留下。
+
+ <!-- 
 ## Matrix and Tensor Methods
 
 ### Robust PCA
@@ -77,3 +80,4 @@ author_profile: true
 <img src="/images/lovasz.png">
 
 <img src="/images/gckm.png">
+--> 
