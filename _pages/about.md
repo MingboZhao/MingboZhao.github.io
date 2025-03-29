@@ -93,6 +93,7 @@ Academia Services
 * Associate Editor of IEEE Trans. on Consumer Electronics
 * Associate Editor of IEEE Trans. on Industrial Informatics
 * Associate Editor of IEEE Access
+* Associate Editor of Neural Computing and Applications
 * Associate Editor of International Journal of Pattern Recognition and Artificial Intelligence
 * Lead Guest Editor for Special Issue of IEEE Trans. on Consumer Electronics: Generative Artificial Intelligence (AI) and Its Applications to Consumer Electronics, 2023
 * Lead Guest Editor for Special Issue of IEEE Trans. on Consumer Electronics: Multimedia Sensing and Computing for Consumer Electronics, 2022
