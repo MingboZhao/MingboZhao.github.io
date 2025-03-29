@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 他很懒，什么都没留下。
-<!-- <strong>Preprint</strong>
+<!--- <strong>Preprint</strong>
 
 
 1. Zixiao Wang, Dong Qiao, <strong>Jicong Fan</strong>*. Spectral Clustering for Discrete Distributions. <a href="https://arxiv.org/pdf/2401.13913">[PDF]</a>
@@ -154,7 +154,7 @@ Boosting Spectral Clustering on Incomplete Data via Kernel Correction and Affini
 	
 1. Youqing Wang, <strong>Jicong Fan</strong> Yuan Yao. Online monitoring of multivariate processes using higher-order cumulants analysis. Industrial and Engineering Chemistry Research. 2014, 53 (11): 4328-4338.
 	
-1. <strong>Jicong Fan</strong>, Youqing Wang, S. Joe Qin. Combined indices for ICA and their applications to multivariate process fault diagnosis. Acta Automatic Sinica, 2013, 39(5): 494-501.-->
+1. <strong>Jicong Fan</strong>, Youqing Wang, S. Joe Qin. Combined indices for ICA and their applications to multivariate process fault diagnosis. Acta Automatic Sinica, 2013, 39(5): 494-501.--->
    
 
 
