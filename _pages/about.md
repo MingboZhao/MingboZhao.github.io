@@ -98,8 +98,9 @@ Academia Services
 * Lead Guest Editor for Special Issue of IEEE Trans. on Consumer Electronics: Generative Artificial Intelligence (AI) and Its Applications to Consumer Electronics, 2023
 * Lead Guest Editor for Special Issue of IEEE Trans. on Consumer Electronics: Multimedia Sensing and Computing for Consumer Electronics, 2022
 * Lead Guest Editor for the Special Issue of Neural Computing and Applications: New Trends of Neural Computing for Advanced Applications 2020
-* Senior Program Committee Member for IJCAI 2025
-* Senior Program Member for AAAI (2025/2024/2023/2022)
+* Senior Program Committee Member for AAAI (2026/2025/2024/2023/2022)
+* Senior Program Committee Member for IJCAI (2025)
+* Senior Program Committee Member for PAKDD (2026)
 * Area Chair for ACM Multimedia (2023/2022/2021)
 
 <!--
