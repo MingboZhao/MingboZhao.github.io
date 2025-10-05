@@ -12,3 +12,99 @@ The Mbot Lab, affiliated with the School of Information and Intelligent Science 
 欢迎来到 Mbot具身智能实验室！
 
 Mbot实验室依托东华大学信息与智能科学学院，于2025年1月成立，实验室位于东华大学2号学院楼226室。实验室专注于具身智能领域的基础理论、前沿技术与创新应用研究，研究方向涵盖但不限于模仿学习、视觉-语言-动作模型、视觉语言导航等，致力于推动智能体在感知、理解与行动一体化方面的发展。欢迎对具身智能感兴趣的师生加入我们！
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MingboZhao Homepage</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    /* 下一张/上一张 按钮 */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 10px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+      user-select: none;
+    }
+    .next {right: 0;}
+    .prev:hover, .next:hover {background-color: rgba(0,0,0,0.5);}
+
+    /* 小圆点 */
+    .dot-container {text-align:center;}
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 3px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {background-color: #717171;}
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Welcome to Mingbo Zhao’s Homepage</h2>
+
+  <div class="slideshow-container">
+    <img class="slides" src="images/pic1.jpg" alt="Image 1">
+    <img class="slides" src="images/pic2.jpg" alt="Image 2">
+    <img class="slides" src="images/pic3.jpg" alt="Image 3">
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("slides");
+      const dots = document.getElementsByClassName("dot");
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // 每3秒切换
+    }
+
+    function plusSlides(n) { slideIndex += n - 1; showSlides(); }
+    function currentSlide(n) { slideIndex = n - 1; showSlides(); }
+  </script>
+</body>
+</html>
+
