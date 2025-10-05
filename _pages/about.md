@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me - MingboZhao's Personal Site"
+title: "About Me - MingboZhao (赵鸣博) Personal Site"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
