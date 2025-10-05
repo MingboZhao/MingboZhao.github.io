@@ -1,5 +1,8 @@
 # main links links
 main:
+  - title: "MLab: 具身智能实验室"
+    url: /labinformation/
+    
   - title: "Publications"
     url: /publications/
 
