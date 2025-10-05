@@ -72,9 +72,9 @@ Mbot实验室依托东华大学信息与智能科学学院，于2025年1月成�
   <h2 style="text-align:center;">Welcome to Mingbo Zhao’s Homepage</h2>
 
   <div class="slideshow-container">
-    <img class="slides" src="images/pic1.jpg" alt="Image 1">
-    <img class="slides" src="images/pic2.jpg" alt="Image 2">
-    <img class="slides" src="images/pic3.jpg" alt="Image 3">
+    <img class="slides" src="images/1280X1280.jpg" alt="Image 1">
+    <img class="slides" src="images/1280X1280.jpg" alt="Image 2">
+    <img class="slides" src="images/1280X1280.jpg" alt="Image 3">
 
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
