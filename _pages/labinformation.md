@@ -37,51 +37,99 @@ Welcome to the Mbot Embodied Intelligence Laboratory!
 
 ---
 
+项目(Projection)
+<details open>
+<summary>星触机械臂</summary>
+<img src="../images/1280X1280.JPEG" width="1000">
+</details>
+
+<details open>
+<summary>Xdog带臂机器狗</summary>
+<img src="../images/1280X1280.JPEG" width="1000">
+</details>
+
+<details open>
+<summary>XLerobot具身智能框架</summary>
+<img src="../images/1280X1280.JPEG" width="1000">
+</details>
+
+---
+
 合作企业和单位
-<table style="width:100%; max-width:1100px; margin:auto; border-collapse:collapse;">
-<tr>
-<td style="width:25%; text-align:center; vertical-align:top; padding:8px;">
-  <img src="images/look1.jpg" width="100%" style="height:160px; object-fit:cover; display:block;">
-  <div style="font-weight:700; margin-top:8px;">AI Fashion Design</div>
-  <div style="color:#666; font-size:14px;">Generative design with diffusion models.</div>
-</td>
 
-<td style="width:25%; text-align:center; vertical-align:top; padding:8px;">
-  <img src="images/look2.jpg" width="100%" style="height:160px; object-fit:cover; display:block;">
-  <div style="font-weight:700; margin-top:8px;">Virtual Try-on</div>
-  <div style="color:#666; font-size:14px;">Visual-language driven fitting system.</div>
-</td>
-
-<td style="width:25%; text-align:center; vertical-align:top; padding:8px;">
-  <img src="images/look3.jpg" width="100%" style="height:160px; object-fit:cover; display:block;">
-  <div style="font-weight:700; margin-top:8px;">Digital Twin</div>
-  <div style="color:#666; font-size:14px;">3D avatar modeling for preview.</div>
-</td>
-
-<td style="width:25%; text-align:center; vertical-align:top; padding:8px;">
-  <img src="images/look4.jpg" width="100%" style="height:160px; object-fit:cover; display:block;">
-  <div style="font-weight:700; margin-top:8px;">Smart Fabric Analysis</div>
-  <div style="color:#666; font-size:14px;">AI-based material & texture analysis.</div>
-</td>
-</tr>
+<table frame=void rules=none align=center>
+  <tr>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      Xbotics具身智能开源社区
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      睿尔曼智能(Realman)
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      上海启能青少年体育俱乐部
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      方舟无限
+    </td>
+  </tr>
+    <tr>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      香港大学
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      浙江大学
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      复旦大学
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      上海工程技术大学
+    </td>
+  </tr>
+    <tr>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      华勤技术
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      电信天翼数字生活
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      复旦大学
+    </td>
+    <td valign="top" align="center" style="padding-top:15px;">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <br>
+      上海工程技术大学
+    </td>
+  </tr>
 </table>
 
-Xbot具身智能开源社区
+---
 
-睿尔曼智能（Realman)
-
-上海启能青少年体育俱乐部
-[图片]
-方舟无限（北京）科技有限公司
-[图片]
-香港大学
-[图片]
-浙江大学
-[图片]
-复旦大学
-[图片]
-上海应用技术大学
-[图片]
-华勤技术股份有限公司
-[图片]
-电信天翼数字生活科技有限公司
+加入我们
+<div align=center valign="top">
+      <img src="../images/1280X1280.JPEG" width="240" height="100">
+      <p>图1. 图片标题</p> 
+</div>
