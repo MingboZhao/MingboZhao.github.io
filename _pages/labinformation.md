@@ -40,7 +40,7 @@ Welcome to the Mbot Embodied Intelligence Laboratory!
 项目(Projection)
 <details open>
 <summary>星触机械臂</summary>
-<img src="../images/1280X1280.JPEG" width="1000">
+<video src="../images/网页开头.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></video>
 </details>
 
 <details open>
