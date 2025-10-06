@@ -37,10 +37,6 @@ Welcome to the Mbot Embodied Intelligence Laboratory!
 
 ---
 
-<video width="600" controls>
-  <source src="../images/web_start.mp4" type="video/mp4">
-</video>
-
 项目(Projection)
 <details open>
 <summary>星触机械臂</summary>
