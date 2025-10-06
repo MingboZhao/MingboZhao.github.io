@@ -1,6 +1,6 @@
 ---
 permalink: /labinformation/
-title: "MLab: 具身智能实验室"
+title: "MLab具身智能实验室"
 author_profile: true
 ---
 
