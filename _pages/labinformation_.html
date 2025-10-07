@@ -299,7 +299,7 @@ body {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>具体研究项目展示</title>
+<title>项目展示模板</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -317,7 +317,7 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 项目标题和描述 */
+/* 标题与描述 */
 .project-section h2 {
   margin-top: 0;
   color: #333;
@@ -328,100 +328,138 @@ body {
   margin-top: 6px;
 }
 
-/* 项目视频网格 */
+/* 视频网格 */
 .project-videos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
 
-.project-videos video {
+/* 单个视频项 */
+.video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 视频样式 */
+.video-item video {
   width: 100%;
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-project-videos video .caption {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
+/* 视频标题样式 */
+.video-title {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
   text-align: center;
-  color: #fff;
-  font-size: 20px;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
-/* 响应式：屏幕小于600px时一列 */
+/* 响应式 */
 @media (max-width: 600px) {
   .project-videos {
     grid-template-columns: 1fr;
   }
 }
-
 </style>
 </head>
 <body>
-<h1 style="text-align:center; margin-bottom:40px;">具体研究项目展示</h1>
 
-<!-- 项目1 -->
+<h1 style="text-align:center; margin-bottom:40px;">我们的项目展示</h1>
+
+<!-- 项目 1 -->
 <div class="project-section">
-  <h2>具身智能LeRobot平台</h2>
+   <h2>具身智能LeRobot平台</h2>
   <p>该框架基于huggingface开源框架Lerobot框架研发，结合Mbot实验室的实验设备和算法研发，针对多种异构机器人进行了适配，能够快速生产统一格式具身数据集，集成模仿学习、强化学习、传统运动控制算法，能够快速进行模型训练、仿真验证和真机部署。
 </p>
   <div class="project-videos">
-    <video controls>
-      <source src="../images/媒体1.mp4" type="video/mp4">
-    </video>
-    <video controls>
-	  <h3>Diffusion：Koch机器人双臂平台进行协同操作，系统运行稳定，能够有效的完成预定任务</h3>
-      <source src="../images/媒体2.mp4" type="video/mp4">
-    </video>
-    <video controls>
-      <source src="../images/媒体3.mp4" type="video/mp4">
-      <div class="caption">SmolVLA：在SO100平台上，验证了具身前沿算法SmolVla，实现了优于ACT的性能</div>
-    </video>
+    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体1.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">ACT: Koch机器人平台多目标抓取实验，针对位置、种类、颜色、背景等进行充分泛化，实验了良好的效果
+</div>
+    </div>
+
+    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体2.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">Diffusion Policy: Koch机器人双臂平台进行协同操作，系统运行稳定，能够有效的完成预定任务
+</div>
+    </div>
+
+    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体3.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">SmolVLA: 在SO100平台上，验证了具身前沿算法SmolVla，实现了优于ACT的性能
+</div>
+    </div>
   </div>
 </div>
 
-<!-- 项目2 -->
+<!-- 项目 2 -->
 <div class="project-section">
   <h2>XDog带臂机器狗平台</h2>
-  <p>该平台基于低成本机器狗和机械臂硬件平台，主打具身智能教育培训和家庭陪伴服务市场，以模仿学习和强化学习作为硬件平台的算法灵魂，打造一个易学、好交互的智能机器狗。
-</p>
+  <p>该平台基于低成本机器狗和机械臂硬件平台，主打具身智能教育培训和家庭陪伴服务市场，以模仿学习和强化学习作为硬件平台的算法灵魂，打造一个易学、好交互的智能机器狗。该项目获得由蚂蚁集团、清华大学主办的前沿科技探索社区（ATEC）赛事亚军</p>
   <div class="project-videos">
-    <video controls>
-      <source src="../images/媒体4.mp4" type="video/mp4">
-    </video>
-    <video controls>
-      <source src="../images/媒体5.mp4" type="video/mp4">
-    </video>
-	<video controls>
-      <source src="../images/媒体6.mp4" type="video/mp4">
-    </video>
+    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体4.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">带臂机器狗实现人机交互</div>
+    </div>
+
+    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体5.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">虚拟环境下进行训练</div>
+    </div>
+	  
+	    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体6.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">真机演示</div>
+    </div>
+	  
   </div>
 </div>
 
-<!-- 项目3 -->
+<!-- 项目 3 -->
 <div class="project-section">
   <h2>自研星触机械臂</h2>
   <p>Mbot实验室星触项目团队自主研发具身智能机械臂套件，这是一款面向科研与教育的六自由度操作臂平台。自主研发、高精度、开放接口；从课堂到实验室，从模仿学习到大模型控制（VLA），让具身智能触手可及。</p>
   <div class="project-videos">
-    <video controls>
-      <source src="../images/媒体10.mp4" type="video/mp4">
-    </video>
-    <video controls>
-      <source src="../images/媒体11.mp4" type="video/mp4">
-    </video>
-    <video controls>
-      <source src="../images/媒体12.mp4" type="video/mp4">
-    </video>
+    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体10.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">星触机械臂爆炸图</div>
+    </div>
+
+    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体11.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">星触机械臂实现主从臂遥操作</div>
+    </div>
+
+    <div class="video-item">
+      <video controls>
+        <source src="../images/媒体13.mp4" type="video/mp4">
+      </video>
+      <div class="video-title">星触机械臂进行算法部署</div>
+    </div>
   </div>
 </div>
 
 </body>
+
