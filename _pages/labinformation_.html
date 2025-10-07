@@ -18,6 +18,10 @@ author_profile: true
 <li>We are committed to advancing the integrated development of perception, understanding, and action in intelligent agents. We warmly welcome students and researchers who are interested in embodied intelligence to join us!</li>
 </ul>  
 <hr>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实验室展示</title>
 <style>
 .slideshow-container {
   position: relative;
@@ -73,6 +77,7 @@ author_profile: true
 .next { right: 0; border-radius: 3px 0 0 3px; }
 .prev:hover, .next:hover { background-color: rgba(0,0,0,0.6); }
 </style>
+</head>
 <body>
 
 <div class="slideshow-container">
@@ -146,5 +151,122 @@ function showSlides(n) {
   if (currentVideo) currentVideo.play();
 }
 </script>
+
+</body>
+
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 40px;
+}
+
+/* 网格容器 */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 每个项目 */
+.project-item {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 图片或视频 */
+.project-item img,
+.project-item video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 标题 */
+.project-item .title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* 描述 */
+.project-item .description {
+  font-size: 14px;
+  color: #666;
+  padding: 8px 12px 12px;
+}
+
+/* 响应式优化：屏幕小于600px时一列 */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center; margin-bottom:40px;">项目展示</h1>
+
+<div class="projects-grid">
+  <!-- 项目1: 图片 -->
+  <div class="project-item">
+    <img src="../images/1280X1280.JPEG" alt="项目1">
+    <div class="title">项目 1</div>
+    <div class="description">这是项目1的简短描述。</div>
+  </div>
+
+  <!-- 项目2: 视频 -->
+  <div class="project-item">
+    <video controls>
+      <source src="../videos/demo.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <div class="title">项目 2</div>
+    <div class="description">这是项目2的视频展示。</div>
+  </div>
+
+  <!-- 项目3: 图片 -->
+  <div class="project-item">
+    <img src="../images/1280X1280.JPEG" alt="项目3">
+    <div class="title">项目 3</div>
+    <div class="description">这是项目3的简短描述。</div>
+  </div>
+
+  <!-- 项目4: 图片 -->
+  <div class="project-item">
+    <img src="../images/1280X1280.JPEG" alt="项目4">
+    <div class="title">项目 4</div>
+    <div class="description">这是项目4的简短描述。</div>
+  </div>
+
+  <!-- 项目5: 视频 -->
+  <div class="project-item">
+    <video controls>
+      <source src="../videos/demo2.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <div class="title">项目 5</div>
+    <div class="description">这是项目5的视频展示。</div>
+  </div>
+
+  <!-- 项目6: 图片 -->
+  <div class="project-item">
+    <img src="../images/1280X1280.JPEG" alt="项目6">
+    <div class="title">项目 6</div>
+    <div class="description">这是项目6的简短描述。</div>
+  </div>
+</div>
 
 </body>
