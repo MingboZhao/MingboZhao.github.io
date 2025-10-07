@@ -19,137 +19,215 @@ author_profile: true
 </ul>  
 <hr>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MingboZhao Homepage</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    /* 下一张/上一张 按钮 */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 10px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+      user-select: none;
+    }
+    .next {right: 0;}
+    .prev:hover, .next:hover {background-color: rgba(0,0,0,0.5);}
+
+    /* 小圆点 */
+    .dot-container {text-align:center;}
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 3px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {background-color: #717171;}
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Welcome to Mingbo Zhao’s Homepage</h2>
+
+  <div class="slideshow-container">
+    <img class="slides" src="images/pic1.jpg" alt="Image 1">
+    <img class="slides" src="images/pic2.jpg" alt="Image 2">
+    <img class="slides" src="images/pic3.jpg" alt="Image 3">
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("slides");
+      const dots = document.getElementsByClassName("dot");
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // 每3秒切换
+    }
+
+    function plusSlides(n) { slideIndex += n - 1; showSlides(); }
+    function currentSlide(n) { slideIndex = n - 1; showSlides(); }
+  </script>
+</body>
+
+<head>
 <meta charset="UTF-8">
-<title>实验室展示</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>具体研究项目展示</title>
 <style>
-.slideshow-container {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-  overflow: hidden;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 40px;
 }
 
-/* 每一个轮播页 */
-.slide {
-  display: none;
-  position: relative;
+/* 每个项目分块 */
+.project-section {
+  margin-bottom: 60px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.slide img,
-.slide video {
+/* 项目标题和描述 */
+.project-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.project-section p {
+  color: #666;
+  margin-top: 6px;
+}
+
+/* 项目视频网格 */
+.project-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-videos video {
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* 文字层 */
-.caption {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+/* 响应式：屏幕小于600px时一列 */
+@media (max-width: 600px) {
+  .project-videos {
+    grid-template-columns: 1fr;
+  }
 }
-
-/* 按钮 */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  user-select: none;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.3);
-  border-radius: 0 3px 3px 0;
-}
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.prev:hover, .next:hover { background-color: rgba(0,0,0,0.6); }
 </style>
 </head>
 <body>
 
-<div class="slideshow-container">
+<h1 style="text-align:center; margin-bottom:40px;">具体研究项目展示</h1>
 
- <div class="slide">
-    <img src="../images/1280X1280.JPEG" alt="Image 1">
-    <div class="caption">Mbot实验室布局</div>
+<!-- 项目1 -->
+<div class="project-section">
+  <h2>具身智能LeRobot平台</h2>
+  <p>该框架基于huggingface开源框架Lerobot框架研发，结合Mbot实验室的实验设备和算法研发，针对多种异构机器人进行了适配，能够快速生产统一格式具身数据集，集成模仿学习、强化学习、传统运动控制算法，能够快速进行模型训练、仿真验证和真机部署。
+</p>
+  <div class="project-videos">
+    <video controls>
+      <source src="../videos/project1_video1.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project1_video2.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project1_video3.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
   </div>
-
-  <div class="slide">
-    <img src="../images/hezhao.jpg" alt="Image 2">
-    <div class="caption">实验室人员合照</div>
-  </div>
-
-  <div class="slide">
-    <img src="../images/Xbot实验平台.jpg" alt="Image 3">
-    <div class="caption">具身智能LeRobot平台</div>
-  </div>
-
-  <div class="slide">
-    <img src="../images/fangzhou.jpg" alt="Image 4">
-    <div class="caption">方舟无限+VR摇操平台</div>
-  </div>
-
-  <div class="slide">
-    <img src="../images/ziyan.jpg" alt="Image 5">
-    <div class="caption">实验室自研机械臂</div>
-  </div>
-
-  <div class="slide">
-    <img src="../images/dog.jpg" alt="Image 6">
-    <div class="caption">XDog带臂机械狗平台</div>
-  </div>
-
-  <div class="slide">
-    <img src="../images/linkerhand.jpg" alt="Image 7">
-    <div class="caption">Link-hand灵巧手研究</div>
-  </div>
-
-  <!-- 翻页按钮 -->
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
 
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
+<!-- 项目2 -->
+<div class="project-section">
+  <h2>项目 2</h2>
+  <p>这是项目2的简短描述，介绍项目特点和应用场景。</p>
+  <div class="project-videos">
+    <video controls>
+      <source src="../videos/project2_video1.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project2_video2.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+  </div>
+</div>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  const slides = document.getElementsByClassName("slide");
-
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-
-  // 隐藏所有幻灯片并暂停视频
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-    const video = slides[i].querySelector("video");
-    if (video) video.pause();
-  }
-
-  // 显示当前幻灯片
-  slides[slideIndex - 1].style.display = "block";
-
-  // 如果是视频，自动播放
-  const currentVideo = slides[slideIndex - 1].querySelector("video");
-  if (currentVideo) currentVideo.play();
-}
-</script>
+<!-- 项目3 -->
+<div class="project-section">
+  <h2>项目 3</h2>
+  <p>这是项目3的简短描述，展示了项目的创新性和成果。</p>
+  <div class="project-videos">
+    <video controls>
+      <source src="../videos/project3_video1.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project3_video2.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project3_video3.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project3_video4.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+  </div>
+</div>
 
 </body>
-
