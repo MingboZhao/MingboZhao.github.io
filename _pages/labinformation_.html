@@ -156,7 +156,7 @@ function showSlides(n) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>项目展示</title>
+<title>项目展示模板</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -165,53 +165,44 @@ body {
   padding: 40px;
 }
 
-/* 网格容器 */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* 每个项目 */
-.project-item {
-  background-color: #fff;
+/* 每个项目分块 */
+.project-section {
+  margin-bottom: 60px;
+  padding: 20px;
+  background: #fff;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
-/* 图片或视频 */
-.project-item img,
-.project-item video {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-
-/* 标题 */
-.project-item .title {
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 10px;
+/* 项目标题和描述 */
+.project-section h2 {
+  margin-top: 0;
   color: #333;
 }
 
-/* 描述 */
-.project-item .description {
-  font-size: 14px;
+.project-section p {
   color: #666;
-  padding: 8px 12px 12px;
+  margin-top: 6px;
 }
 
-/* 响应式优化：屏幕小于600px时一列 */
+/* 项目视频网格 */
+.project-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-videos video {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 响应式：屏幕小于600px时一列 */
 @media (max-width: 600px) {
-  .projects-grid {
+  .project-videos {
     grid-template-columns: 1fr;
   }
 }
@@ -219,55 +210,65 @@ body {
 </head>
 <body>
 
-<h1 style="text-align:center; margin-bottom:40px;">项目展示</h1>
+<h1 style="text-align:center; margin-bottom:40px;">我们的项目展示</h1>
 
-<div class="projects-grid">
-  <!-- 项目1: 图片 -->
-  <div class="project-item">
-    <img src="../images/1280X1280.JPEG" alt="项目1">
-    <div class="title">项目 1</div>
-    <div class="description">这是项目1的简短描述。</div>
-  </div>
-
-  <!-- 项目2: 视频 -->
-  <div class="project-item">
+<!-- 项目1 -->
+<div class="project-section">
+  <h2>项目 1</h2>
+  <p>这是项目1的简短描述，介绍项目背景和主要内容。</p>
+  <div class="project-videos">
     <video controls>
-      <source src="../videos/demo.mp4" type="video/mp4">
+      <source src="../videos/project1_video1.mp4" type="video/mp4">
       您的浏览器不支持视频播放。
     </video>
-    <div class="title">项目 2</div>
-    <div class="description">这是项目2的视频展示。</div>
-  </div>
-
-  <!-- 项目3: 图片 -->
-  <div class="project-item">
-    <img src="../images/1280X1280.JPEG" alt="项目3">
-    <div class="title">项目 3</div>
-    <div class="description">这是项目3的简短描述。</div>
-  </div>
-
-  <!-- 项目4: 图片 -->
-  <div class="project-item">
-    <img src="../images/1280X1280.JPEG" alt="项目4">
-    <div class="title">项目 4</div>
-    <div class="description">这是项目4的简短描述。</div>
-  </div>
-
-  <!-- 项目5: 视频 -->
-  <div class="project-item">
     <video controls>
-      <source src="../videos/demo2.mp4" type="video/mp4">
+      <source src="../videos/project1_video2.mp4" type="video/mp4">
       您的浏览器不支持视频播放。
     </video>
-    <div class="title">项目 5</div>
-    <div class="description">这是项目5的视频展示。</div>
+    <video controls>
+      <source src="../videos/project1_video3.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
   </div>
+</div>
 
-  <!-- 项目6: 图片 -->
-  <div class="project-item">
-    <img src="../images/1280X1280.JPEG" alt="项目6">
-    <div class="title">项目 6</div>
-    <div class="description">这是项目6的简短描述。</div>
+<!-- 项目2 -->
+<div class="project-section">
+  <h2>项目 2</h2>
+  <p>这是项目2的简短描述，介绍项目特点和应用场景。</p>
+  <div class="project-videos">
+    <video controls>
+      <source src="../videos/project2_video1.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project2_video2.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+  </div>
+</div>
+
+<!-- 项目3 -->
+<div class="project-section">
+  <h2>项目 3</h2>
+  <p>这是项目3的简短描述，展示了项目的创新性和成果。</p>
+  <div class="project-videos">
+    <video controls>
+      <source src="../videos/project3_video1.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project3_video2.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project3_video3.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <video controls>
+      <source src="../videos/project3_video4.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
   </div>
 </div>
 
