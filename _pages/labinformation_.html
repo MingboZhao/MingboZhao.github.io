@@ -20,113 +20,176 @@ author_profile: true
 <hr>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MingboZhao Homepage</title>
-  <style>
-    * {box-sizing: border-box;}
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实验室展示模块</title>
+<style>
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 40px;
+}
 
-    .slideshow-container {
-      position: relative;
-      max-width: 800px;
-      margin: 40px auto;
-    }
+/* 外层容器 */
+.slideshow-container {
+  position: relative;
+  width: 80%;             /* 控制整体大小 */
+  max-width: 900px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: #000;
+}
 
-    .slides {
-      display: none;
-      width: 100%;
-      border-radius: 12px;
-    }
+/* 每页幻灯片 */
+.slide {
+  display: none;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  transition: opacity 1s ease;
+}
 
-    /* 下一张/上一张 按钮 */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 10px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.3s;
-      user-select: none;
-    }
-    .next {right: 0;}
-    .prev:hover, .next:hover {background-color: rgba(0,0,0,0.5);}
+.slide img,
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    /* 小圆点 */
-    .dot-container {text-align:center;}
-    .dot {
-      cursor: pointer;
-      height: 12px;
-      width: 12px;
-      margin: 0 3px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    .active, .dot:hover {background-color: #717171;}
-	.caption {
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      color: #fff;
-      font-size: 20px;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 10px 0;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-    }
-  </style>
+/* 说明文字 */
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* 左右按钮 */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.3s;
+  user-select: none;
+}
+
+.prev:hover, .next:hover {
+  color: #ffcc00;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* 指示点 */
+.dot-container {
+  text-align: center;
+  padding: 12px 0;
+  background: #fff;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active, .dot:hover {
+  background-color: #ffcc00;
+}
+</style>
 </head>
 <body>
 
-  <h2 style="text-align:center;">Welcome to Mingbo Zhao’s Homepage</h2>
+<h2 style="text-align:center;margin-bottom:20px;">实验室概况展示</h2>
 
-  <div class="slideshow-container">
-    <div class="slide">
-    <img src="../images/1280X1280.JPEG" alt="Image 1">
-    <div class="caption">Mbot实验室布局</div>
+<div class="slideshow-container">
+
+  <!-- 页1：背景图 -->
+  <div class="slide fade">
+    <img src="../images/lab_background.jpg" alt="实验室背景">
+    <div class="caption">实验室简介：聚焦具身智能与时尚AI研究</div>
   </div>
 
-  <div class="slide">
-    <img src="../images/hezhao.jpg" alt="Image 2">
-    <div class="caption">实验室人员合照</div>
+  <!-- 页2：团队合照 -->
+  <div class="slide fade">
+    <img src="../images/team_photo.jpg" alt="团队合照">
+    <div class="caption">我们的团队：创新、协作、跨界</div>
   </div>
 
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
+  <!-- 页3：科研项目视频 -->
+  <div class="slide fade">
+    <video autoplay muted loop>
+      <source src="../videos/lab_project.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <div class="caption">科研项目展示：AI赋能设计与智能制造</div>
   </div>
 
-  <div class="dot-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
 
-  <script>
-    let slideIndex = 0;
-    showSlides();
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
 
-    function showSlides() {
-      const slides = document.getElementsByClassName("slides");
-      const dots = document.getElementsByClassName("dot");
-      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 3000); // 每3秒切换
-    }
+<script>
+let slideIndex = 0;
+showSlides();
 
-    function plusSlides(n) { slideIndex += n - 1; showSlides(); }
-    function currentSlide(n) { slideIndex = n - 1; showSlides(); }
-  </script>
+/* 自动与手动翻页控制 */
+function plusSlides(n) {
+  slideIndex += n - 1;  // 防止冲突
+  showSlides();
+}
+
+function currentSlide(n) {
+  slideIndex = n - 1;
+  showSlides();
+}
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+
+  slides[slideIndex-1].style.display = "block";
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+  dots[slideIndex-1].classList.add("active");
+
+  // 每5秒自动切换
+  setTimeout(showSlides, 5000);
+}
+</script>
+
 </body>
 
 <head>
@@ -242,8 +305,8 @@ body {
 
 <!-- 项目3 -->
 <div class="project-section">
-  <h2>项目 3</h2>
-  <p>这是项目3的简短描述，展示了项目的创新性和成果。</p>
+  <h2>自研星触机械臂</h2>
+  <p>Mbot实验室星触项目团队自主研发具身智能机械臂套件，这是一款面向科研与教育的六自由度操作臂平台。自主研发、高精度、开放接口；从课堂到实验室，从模仿学习到大模型控制（VLA），让具身智能触手可及。</p>
   <div class="project-videos">
     <video controls>
       <source src="../videos/project3_video1.mp4" type="video/mp4">
