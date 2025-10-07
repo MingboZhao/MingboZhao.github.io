@@ -184,6 +184,121 @@ function showSlides() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目展示</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 40px;
+}
+
+/* 网格容器 */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 每个项目 */
+.project-item {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 图片或视频 */
+.project-item img,
+.project-item video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 标题 */
+.project-item .title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* 描述 */
+.project-item .description {
+  font-size: 14px;
+  color: #666;
+  padding: 8px 12px 12px;
+}
+
+/* 响应式优化：屏幕小于600px时一列 */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+<hr>
+<h1 style="text-align:center; margin-bottom:40px;">项目展示</h1>
+
+<div class="projects-grid">
+  <!-- 项目1: 图片 -->
+  <div class="project-item">
+    <img src="../images/Xbot实验平台.jpg" alt="项目1">
+    <div class="title">具身框架MLerobot</div>
+    <div class="description">该框架基于huggingface开源框架Lerobot框架研发，结合Mbot实验室的实验设备和算法研发，针对多种异构机器人进行了适配，能够快速生产统一格式具身数据集，集成模仿学习、强化学习、传统运动控制算法，能够快速进行模型训练、仿真验证和真机部署。</div>
+  </div>
+
+  <!-- 项目2: 图片 -->
+  <div class="project-item">
+    <img src="../images/dog.jpg" alt="项目2">
+    <div class="title">Xdog带臂机器狗平台</div>
+    <div class="description">该平台基于低成本机器狗和机械臂硬件平台，主打具身智能教育培训和家庭陪伴服务市场，以模仿学习和强化学习作为硬件平台的算法灵魂，打造一个好玩、易学、好交互的智能机器狗。</div>
+  </div>
+
+  <!-- 项目3: 图片 -->
+  <div class="project-item">
+    <img src="../images/ziyan.jpg" alt="项目3">
+    <div class="title">自研星触机械臂</div>
+    <div class="description">Mbot实验室星触项目团队自主研发具身智能机械臂套件，这是一款面向科研与教育的六自由度操作臂平台。自主研发、高精度、开放接口；从课堂到实验室，从模仿学习到大模型控制（VLA），让具身智能触手可及。
+</div>
+  </div>
+
+  <!-- 项目4: 图片 -->
+  <div class="project-item">
+    <img src="../images/fangzhou.jpg" alt="项目4">
+    <div class="title">方舟无限+VR摇操平台</div>
+    <div class="description">采用方舟无限机械臂配合PICO4进行VR摇操采集数据</div>
+  </div>
+
+  <!-- 项目5: 图片 -->
+  <div class="project-item">
+    <img src="../images/linkerhand.jpg" alt="项目5">
+    <div class="title">灵巧手研究平台</div>
+    <div class="description">采用linkhand进行灵巧手通用平台</div>
+  </div>
+
+  <!-- 项目6: 图片 -->
+  <div class="project-item">
+    <img src="../images/1280X1280.JPEG" alt="项目6">
+    <div class="title">视觉语言导航</div>
+    <div class="description">研究前沿的视觉语言导航算法，推动机器智能体的发展</div>
+  </div>
+</div>
+
+</body>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>具体研究项目展示</title>
 <style>
 body {
@@ -228,13 +343,7 @@ body {
   border-radius: 8px;
 }
 
-/* 响应式：屏幕小于600px时一列 */
-@media (max-width: 600px) {
-  .project-videos {
-    grid-template-columns: 1fr;
-  }
-}
-.caption {
+project-videos video .caption {
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -247,6 +356,14 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/* 响应式：屏幕小于600px时一列 */
+@media (max-width: 600px) {
+  .project-videos {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 </head>
 <body>
