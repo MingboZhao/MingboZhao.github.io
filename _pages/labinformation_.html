@@ -68,6 +68,19 @@ author_profile: true
       transition: background-color 0.6s ease;
     }
     .active, .dot:hover {background-color: #717171;}
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
   </style>
 </head>
 <body>
@@ -75,9 +88,40 @@ author_profile: true
   <h2 style="text-align:center;">Welcome to Mingbo Zhao’s Homepage</h2>
 
   <div class="slideshow-container">
-    <img class="slides" src="images/pic1.jpg" alt="Image 1">
-    <img class="slides" src="images/pic2.jpg" alt="Image 2">
-    <img class="slides" src="images/pic3.jpg" alt="Image 3">
+    <div class="slide">
+    <img src="../images/1280X1280.JPEG" alt="Image 1">
+    <div class="caption">Mbot实验室布局</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/hezhao.jpg" alt="Image 2">
+    <div class="caption">实验室人员合照</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/Xbot实验平台.jpg" alt="Image 3">
+    <div class="caption">具身智能LeRobot平台</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/fangzhou.jpg" alt="Image 4">
+    <div class="caption">方舟无限+VR摇操平台</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/ziyan.jpg" alt="Image 5">
+    <div class="caption">实验室自研机械臂</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/dog.jpg" alt="Image 6">
+    <div class="caption">XDog带臂机械狗平台</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/linkerhand.jpg" alt="Image 7">
+    <div class="caption">Link-hand灵巧手研究</div>
+  </div>
 
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
@@ -87,6 +131,10 @@ author_profile: true
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
   </div>
 
   <script>
