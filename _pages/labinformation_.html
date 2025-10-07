@@ -10,65 +10,141 @@ author_profile: true
 <li>实验室专注于具身智能领域的基础理论、前沿技术与创新应用研究，研究方向涵盖但不限于模仿学习、视觉-语言-动作模型、视觉语言导航等，致力于推动机器智能体在感知、理解与行动方面的发展。</li>
 <li>欢迎对具身智能感兴趣的师生加入我们！</li>
 </ul>
-
+<hr>
 <p>Welcome to the Mbot Embodied Intelligence Laboratory!</p>
 <ul>
 <li>The Mbot Lab, affiliated with the School of Information and Intelligent Science at Donghua University, was established in January 2025 and is located in Room 226, Building 2. </li>
 <li>Our laboratory focuses on fundamental theories, cutting-edge technologies, and innovative applications in the field of embodied intelligence. The research areas include, but are not limited to, imitation learning, vision-language-action models, and vision-language navigation. </li>
 <li>We are committed to advancing the integrated development of perception, understanding, and action in intelligent agents. We warmly welcome students and researchers who are interested in embodied intelligence to join us!</li>
 </ul>  
+<hr>
+<style>
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* 每一个轮播页 */
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img,
+.slide video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* 文字层 */
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* 按钮 */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  border-radius: 0 3px 3px 0;
+}
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.6); }
+</style>
+<body>
 
 <div class="slideshow-container">
-  <img class="slides" src="../images/1280X1280.JPEG" alt="Image 1">
-  <img class="slides" src="../images/1280X1280.JPEG" alt="Image 2">
-  <video class="slides" controls><source src="../images/web_start.mp4" type="video/mp4"></video>
 
+  <div class="slide">
+    <img src="../images/1280X1280.JPEG" alt="Image 1">
+    <div class="caption">Mbot实验室布局</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/hezhao.jpg" alt="Image 2">
+    <div class="caption">实验室人员合照</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/Xbot实验平台.jpg" alt="Image 3">
+    <div class="caption">具身智能LeRobot平台</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/fangzhou.jpg" alt="Image 4">
+    <div class="caption">方舟无限+VR摇操平台</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/ziyan.jpg" alt="Image 5">
+    <div class="caption">实验室自研机械臂</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/dog.jpg" alt="Image 6">
+    <div class="caption">XDog带臂机械狗平台</div>
+  </div>
+
+  <div class="slide">
+    <img src="../images/linkerhand.jpg" alt="Image 7">
+    <div class="caption">Link-hand灵巧手研究</div>
+  </div>
+
+  <!-- 翻页按钮 -->
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
 
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-<style>
-  * {box-sizing: border-box;}
-  .slideshow-container {position: relative; max-width: 1200px; margin: 40px auto;}
-  .slides {display: none; width: 100%; border-radius: 0;}
-  .prev, .next {
-    cursor: pointer; position: absolute; top: 50%;
-    padding: 10px; margin-top: -22px;
-    color: white; font-weight: bold; font-size: 18px;
-    transition: none; user-select: none;
-  }
-  .next {right: 0;}
-  .prev:hover, .next:hover {background-color: rgba(0,0,0,0.5);}
-  .dot-container {text-align:center;}
-  .dot {
-    cursor: pointer; height: 12px; width: 12px; margin: 0 3px;
-    background-color: #bbb; border-radius: 50%;
-    display: inline-block; transition: background-color 0.6s ease;
-  }
-  .active, .dot:hover {background-color: #717171;}
-</style>
-
 <script>
-  let slideIndex = 0;
-  showSlides();
+let slideIndex = 1;
+showSlides(slideIndex);
 
-  function showSlides() {
-    const slides = document.getElementsByClassName("slides");
-    const dots = document.getElementsByClassName("dot");
-    for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 3000);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("slide");
+
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+
+  // 隐藏所有幻灯片并暂停视频
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    const video = slides[i].querySelector("video");
+    if (video) video.pause();
   }
-  function plusSlides(n) { slideIndex += n - 1; showSlides(); }
-  function currentSlide(n) { slideIndex = n - 1; showSlides(); }
+
+  // 显示当前幻灯片
+  slides[slideIndex - 1].style.display = "block";
+
+  // 如果是视频，自动播放
+  const currentVideo = slides[slideIndex - 1].querySelector("video");
+  if (currentVideo) currentVideo.play();
+}
 </script>
+
+</body>
