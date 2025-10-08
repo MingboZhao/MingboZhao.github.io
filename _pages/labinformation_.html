@@ -484,11 +484,12 @@ body {
 </div>
 
 </body>
+
 <hr class="hr-double-arrow">
 <h1 style="text-align:center; margin-bottom:40px;">联系我们</h1>
 <head>
   <meta charset="utf-8">
-  <title>我的实验室 - 位置</title>
+  <title>Mbot 实验室定位 - Google Maps</title>
   <style>
     html, body {
       height: 100%;
@@ -496,34 +497,38 @@ body {
       padding: 0;
     }
     #map {
-      width: 100%;
       height: 500px;
+      width: 100%;
     }
   </style>
-  <!-- 替换 YOUR_AK 为你自己的百度地图AK -->
-  <script src="https://api.map.baidu.com/api?v=3.0&ak=mR61YHaD2wfmuw4F9Z7ZvNk7q5bgAJOQ"></script>
 </head>
 <body>
-  <h1 style="text-align:center;">🧪 Mbot 实验室 位置</h1>
+  <h1 style="text-align:center;">📍 Mbot 实验室位置（Google 地图）</h1>
   <div id="map"></div>
 
   <script>
-    // 实验室的经纬度（示例：东华大学）
-    var labLng = 121.217100; 
-    var labLat = 31.063189;
-
     // 初始化地图
-    var map = new BMap.Map("map");
-    var point = new BMap.Point(labLng, labLat);
-    map.centerAndZoom(point, 17);  // 放大到街区级别
-    map.enableScrollWheelZoom(true);
+    function initMap() {
+      // 实验室的经纬度（示例：东华大学）
+      const labLocation = { lat: 31.063189, lng: 121.217100 };
 
-    // 添加标注
-    var marker = new BMap.Marker(point);
-    map.addOverlay(marker);
+      // 创建地图
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: labLocation,
+        zoom: 17,
+      });
 
-    // 添加标签
-    var label = new BMap.Label("📍 Mbot 实验室",{offset:new BMap.Size(20,-10)});
-    marker.setLabel(label);
+      // 添加标记
+      const marker = new google.maps.Marker({
+        position: labLocation,
+        map: map,
+        title: "Mbot 实验室",
+      });
+    }
+  </script>
+
+  <!-- 加载 Google Maps JavaScript API -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzVwmMLtUQPyWdv1GhoVS55R7cYsa38DI&callback=initMap">
   </script>
 </body>
