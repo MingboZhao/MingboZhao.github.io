@@ -489,7 +489,7 @@ body {
 <h1 style="text-align:center; margin-bottom:40px;">联系我们</h1>
 <head>
   <meta charset="utf-8">
-  <title>我的实验室 - 位置</title>
+  <title>Mbot 实验室 - 高德地图定位</title>
   <style>
     html, body {
       height: 100%;
@@ -497,35 +497,54 @@ body {
       padding: 0;
     }
     #map {
-      width: 100%;
       height: 500px;
+      width: 100%;
     }
   </style>
-  <!-- 替换 YOUR_AK 为你自己的百度地图AK -->
-  <script src="https://api.map.baidu.com/api?v=3.0&ak=mR61YHaD2wfmuw4F9Z7ZvNk7q5bgAJOQ"></script>
+  <!-- 引入高德地图JS API -->
+  <script src="https://webapi.amap.com/maps?v=2.0&key=9e8af459efe027c22d2f089579e1e6f5"></script>
 </head>
 <body>
-  <h1 style="text-align:center;">🧪 Mbot 实验室 位置</h1>
+  <h1 style="text-align:center;">📍 Mbot 实验室（高德地图）</h1>
   <div id="map"></div>
 
   <script>
-    // 实验室的经纬度（示例：东华大学）
-    var labLng = 121.217100; 
-    var labLat = 31.063189;
+    // 实验室坐标（示例：东华大学）
+    var labLng = 121.211442;
+    var labLat = 31.05691;
 
     // 初始化地图
-    var map = new BMap.Map("map");
-    var point = new BMap.Point(labLng, labLat);
-    map.centerAndZoom(point, 17);  // 放大到街区级别
-    map.enableScrollWheelZoom(true);
+    var map = new AMap.Map('map', {
+      zoom: 17,                     // 缩放等级
+      center: [labLng, labLat],     // 中心点坐标
+    });
 
-    // 添加标注
-    var marker = new BMap.Marker(point);
-    map.addOverlay(marker);
+    // 添加实验室标记
+    var marker = new AMap.Marker({
+      position: [labLng, labLat],
+      title: 'Mbot 实验室'
+    });
+    map.add(marker);
 
-    // 添加标签
-    var label = new BMap.Label("📍 Mbot 实验室",{offset:new BMap.Size(20,-10)});
-    marker.setLabel(label);
+    // 添加信息窗体
+    var infoWindow = new AMap.InfoWindow({
+      content: '<strong>📍 Mbot 实验室</strong><br>东华大学2号学院楼226室',
+      offset: new AMap.Pixel(0, -30)
+    });
+    marker.on('click', function() {
+      infoWindow.open(map, marker.getPosition());
+    });
+
+    // 自动定位
+    AMap.plugin('AMap.Geolocation', function() {
+      var geolocation = new AMap.Geolocation({
+        enableHighAccuracy: true, // 高精度定位
+        timeout: 10000,          // 超时
+        position: 'RB',          // 定位按钮位置（右下角）
+      });
+      map.addControl(geolocation);
+      geolocation.getCurrentPosition();
+    });
   </script>
 </body>
 </body>
