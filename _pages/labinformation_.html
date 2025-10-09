@@ -485,8 +485,6 @@ body {
 
 </body>
 
-<hr class="hr-double-arrow">
-<h1 style="text-align:center; margin-bottom:40px;">联系我们</h1>
 <head>
   <meta charset="utf-8">
   <title>Mbot 实验室 - 高德地图定位</title>
@@ -509,41 +507,65 @@ body {
   <div id="map"></div>
 
   <script>
-    // 实验室坐标（示例：东华大学）
-    var labLng = 121.211442;
-    var labLat = 31.05691;
+    // 添加加载错误监听
+    window._AMapSecurityConfig = {
+      securityJsCode: '' // 如果您启用了安全密钥，需要在这里配置
+    }
 
-    // 初始化地图
-    var map = new AMap.Map('map', {
-      zoom: 17,                     // 缩放等级
-      center: [labLng, labLat],     // 中心点坐标
-    });
+    // 等待DOM和API完全加载
+    function initMap() {
+      try {
+        // 实验室坐标
+        var labLng = 121.211442;
+        var labLat = 31.05691;
 
-    // 添加实验室标记
-    var marker = new AMap.Marker({
-      position: [labLng, labLat],
-      title: 'Mbot 实验室'
-    });
-    map.add(marker);
+        // 初始化地图
+        var map = new AMap.Map('map', {
+          zoom: 17,
+          center: [labLng, labLat],
+          viewMode: '3D' // 明确指定视图模式
+        });
 
-    // 添加信息窗体
-    var infoWindow = new AMap.InfoWindow({
-      content: '<strong>📍 Mbot 实验室</strong><br>东华大学2号学院楼226室',
-      offset: new AMap.Pixel(0, -30)
-    });
-    marker.on('click', function() {
-      infoWindow.open(map, marker.getPosition());
-    });
-	
-	// 自动定位
-    AMap.plugin('AMap.Geolocation', function() {
-      var geolocation = new AMap.Geolocation({
-        enableHighAccuracy: true, // 高精度定位
-        timeout: 10000,          // 超时
-        position: 'RB',          // 定位按钮位置（右下角）
-      });
-      map.addControl(geolocation);
-      geolocation.getCurrentPosition();
-    });
+        // 添加标记
+        var marker = new AMap.Marker({
+          position: [labLng, labLat],
+          title: 'Mbot 实验室',
+          map: map // 直接传入map参数
+        });
+
+        // 信息窗口
+        var infoWindow = new AMap.InfoWindow({
+          content: '<strong>📍 Mbot 实验室</strong><br>东华大学2号学院楼226室',
+          offset: new AMap.Pixel(0, -30)
+        });
+        
+        marker.on('click', function() {
+          infoWindow.open(map, marker.getPosition());
+        });
+
+        // 自动定位（可选）
+        AMap.plugin('AMap.Geolocation', function() {
+          var geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,
+            timeout: 10000,
+            position: 'RB',
+            map: map
+          });
+          map.addControl(geolocation);
+          // geolocation.getCurrentPosition(); // 注释掉自动定位，避免干扰
+        });
+
+        console.log('地图初始化成功');
+      } catch (error) {
+        console.error('地图初始化失败:', error);
+      }
+    }
+
+    // 确保API加载完成后初始化
+    if (window.AMap) {
+      initMap();
+    } else {
+      window.onload = initMap;
+    }
   </script>
 </body>
