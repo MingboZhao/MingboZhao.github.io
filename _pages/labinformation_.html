@@ -534,17 +534,7 @@ body {
     marker.on('click', function() {
       infoWindow.open(map, marker.getPosition());
     });
+	  
 
-    // 自动定位
-    AMap.plugin('AMap.Geolocation', function() {
-      var geolocation = new AMap.Geolocation({
-        enableHighAccuracy: true, // 高精度定位
-        timeout: 10000,          // 超时
-        position: 'RB',          // 定位按钮位置（右下角）
-      });
-      map.addControl(geolocation);
-      geolocation.getCurrentPosition();
-    });
   </script>
-</body>
 </body>
