@@ -51,7 +51,7 @@ author_profile: true
       right: -20px;
     }
     
-    /* === 完全重写的幻灯片样式 === */
+    /* 简化的幻灯片样式 */
     .slideshow-section {
       max-width: 800px;
       margin: 40px auto;
@@ -65,90 +65,69 @@ author_profile: true
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      background: #fff;
     }
     
     .slide {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
-      z-index: 1;
     }
     
     .slide.active {
       opacity: 1;
-      z-index: 2;
     }
     
     .slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
     
     .slide-caption {
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.45);
+      width: 100%;
+      background: rgba(0,0,0,0.5);
       color: white;
-      padding: 15px;
+      padding: 10px;
       text-align: center;
-      font-size: 18px;
-      backdrop-filter: blur(2px);
     }
     
     .slide-controls {
       position: absolute;
       top: 50%;
-      left: 0;
-      right: 0;
-      transform: translateY(-50%);
+      width: 100%;
       display: flex;
       justify-content: space-between;
       padding: 0 20px;
-      z-index: 10;
+      transform: translateY(-50%);
     }
     
     .slide-btn {
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.5);
       color: white;
       border: none;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      font-size: 20px;
       cursor: pointer;
-      transition: background 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .slide-btn:hover {
-      background: rgba(0,0,0,0.8);
     }
     
     .slide-indicators {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
+      text-align: center;
+      margin-top: 10px;
     }
     
     .indicator {
+      display: inline-block;
       width: 12px;
       height: 12px;
+      background: #ccc;
       border-radius: 50%;
-      background: #bbb;
+      margin: 0 5px;
       cursor: pointer;
-      transition: background 0.3s;
     }
     
     .indicator.active {
@@ -373,27 +352,35 @@ author_profile: true
     </div>
     <hr class="hr-double-arrow">
 
-<!-- 只替换幻灯片部分 -->
-<div class="slideshow-section">
-  <div style="position:relative;width:100%;height:400px;border:2px solid red;">
-    <div id="slide1" style="position:absolute;width:100%;height:100%;">
-      <img src="../images/1280X1280.JPEG" style="width:100%;height:100%;object-fit:cover;">
-      <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;">
-        实验室布局
+<!-- 超级简化的幻灯片部分 -->
+    <h1>📸 实验室展示</h1>
+    <div class="slideshow-section">
+      <div class="slideshow-wrapper">
+        <!-- 幻灯片1 -->
+        <div class="slide active" id="slide1">
+          <img src="../images/1280X1280.JPEG" alt="实验室布局" 
+               onerror="this.src='https://via.placeholder.com/800x450/4A90E2/FFFFFF?text=实验室布局'">
+          <div class="slide-caption">实验室布局</div>
+        </div>
+        
+        <!-- 幻灯片2 -->
+        <div class="slide" id="slide2">
+          <img src="../images/hezhao.jpg" alt="实验室合照" 
+               onerror="this.src='https://via.placeholder.com/800x450/50E3C2/FFFFFF?text=实验室合照'">
+          <div class="slide-caption">实验室合照</div>
+        </div>
+        
+        <div class="slide-controls">
+          <button class="slide-btn" onclick="prevSlide()">‹</button>
+          <button class="slide-btn" onclick="nextSlide()">›</button>
+        </div>
+      </div>
+      
+      <div class="slide-indicators">
+        <span class="indicator active" onclick="showSlide(0)"></span>
+        <span class="indicator" onclick="showSlide(1)"></span>
       </div>
     </div>
-    <div id="slide2" style="position:absolute;width:100%;height:100%;display:none;">
-      <img src="../images/hezhao.jpg" style="width:100%;height:100%;object-fit:cover;">
-      <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;">
-        实验室合照
-      </div>
-    </div>
-    <button onclick="document.getElementById('slide1').style.display='none';document.getElementById('slide2').style.display='block';" 
-            style="position:absolute;left:10px;top:50%;">上一张</button>
-    <button onclick="document.getElementById('slide1').style.display='block';document.getElementById('slide2').style.display='none';" 
-            style="position:absolute;right:10px;top:50%;">下一张</button>
-  </div>
-</div>
 
     <hr class="hr-double-arrow">
 
@@ -563,7 +550,7 @@ author_profile: true
         <hr>
         <h4>🕒 办公时间</h4>
         <p>周一至周五(8:00 - 22:00)<br>
-        节假日有人办公，欢迎交流访问，来前请预约</p>
+        节假日也有人办公，欢迎交流访问，来前请预约</p>
       </div>
     </div>
   </div>
@@ -572,100 +559,58 @@ author_profile: true
   <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
   <script>
-    // 简化的幻灯片实现 - 直接使用全局函数
-    const slideshow = {
-      currentSlide: 0,
-      slides: document.querySelectorAll('.slide'),
-      indicators: document.querySelectorAll('.indicator'),
-      autoPlayInterval: null,
-      
-      init: function() {
-        console.log('Slideshow initialized with', this.slides.length, 'slides');
-        this.startAutoPlay();
-        
-        // 鼠标悬停时暂停自动播放
-        const wrapper = document.querySelector('.slideshow-wrapper');
-        wrapper.addEventListener('mouseenter', () => this.stopAutoPlay());
-        wrapper.addEventListener('mouseleave', () => this.startAutoPlay());
-      },
-      
-      showSlide: function(index) {
-        console.log('Showing slide', index);
-        
-        // 隐藏所有幻灯片和指示器
-        this.slides.forEach(slide => {
-          slide.classList.remove('active');
-        });
-        this.indicators.forEach(indicator => {
-          indicator.classList.remove('active');
-        });
-        
-        // 显示当前幻灯片
-        if (this.slides[index]) {
-          this.slides[index].classList.add('active');
-        }
-        if (this.indicators[index]) {
-          this.indicators[index].classList.add('active');
-        }
-        
-        this.currentSlide = index;
-      },
-      
-      next: function() {
-        let nextIndex = (this.currentSlide + 1) % this.slides.length;
-        console.log('Next slide:', nextIndex);
-        this.showSlide(nextIndex);
-      },
-      
-      prev: function() {
-        let prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-        console.log('Previous slide:', prevIndex);
-        this.showSlide(prevIndex);
-      },
-      
-      goToSlide: function(index) {
-        console.log('Go to slide:', index);
-        this.showSlide(index);
-      },
-      
-      startAutoPlay: function() {
-        this.stopAutoPlay();
-        this.autoPlayInterval = setInterval(() => {
-          this.next();
-        }, 5000);
-      },
-      
-      stopAutoPlay: function() {
-        if (this.autoPlayInterval) {
-          clearInterval(this.autoPlayInterval);
-          this.autoPlayInterval = null;
-        }
-      }
-    };
+    // 超级简化的幻灯片逻辑
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
     
-    // 初始化幻灯片
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOM loaded, initializing slideshow...');
-      slideshow.init();
-    });
+    console.log('找到的幻灯片数量:', slides.length);
+    console.log('找到的指示器数量:', indicators.length);
     
-    // 回到顶部功能
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    function showSlide(n) {
+      console.log('切换到幻灯片:', n);
+      
+      // 隐藏所有幻灯片
+      slides.forEach(slide => {
+        slide.classList.remove('active');
       });
+      
+      // 更新所有指示器
+      indicators.forEach(indicator => {
+        indicator.classList.remove('active');
+      });
+      
+      // 显示当前幻灯片和指示器
+      if (slides[n]) {
+        slides[n].classList.add('active');
+      }
+      if (indicators[n]) {
+        indicators[n].classList.add('active');
+      }
+      
+      currentSlide = n;
     }
     
-    // 显示/隐藏回到顶部按钮
-    window.onscroll = function() {
-      const backToTopButton = document.querySelector('.back-to-top');
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    };
+    function nextSlide() {
+      console.log('下一张幻灯片');
+      let next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+    
+    function prevSlide() {
+      console.log('上一张幻灯片');
+      let prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+    
+    // 自动播放
+    setInterval(nextSlide, 3000);
+    
+    // 初始显示
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('页面加载完成，初始化幻灯片');
+      showSlide(0);
+    });
   </script>
 </body>
 </html>
