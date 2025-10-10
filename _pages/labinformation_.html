@@ -51,88 +51,79 @@ author_profile: true
       right: -20px;
     }
     
-    /* 简化的幻灯片样式 */
-    .slideshow-section {
+    /* === 幻灯片样式 === */
+    .slideshow-container {
       max-width: 800px;
+      position: relative;
       margin: 40px auto;
-      position: relative;
-    }
-    
-    .slideshow-wrapper {
-      position: relative;
-      width: 100%;
-      height: 450px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      background: #fff;
     }
-    
-    .slide {
-      position: absolute;
+    .mySlides { 
+      display: none; 
+      position: relative; 
+      animation: fade 1.5s ease-in-out;
+    }
+    @keyframes fade {
+      from {opacity: 0.4}
+      to {opacity: 1}
+    }
+    .mySlides img {
       width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-    
-    .slide.active {
-      opacity: 1;
-    }
-    
-    .slide img {
-      width: 100%;
-      height: 100%;
+      height: 450px;
       object-fit: cover;
+      border-radius: 12px;
+      display: block;
     }
-    
-    .slide-caption {
+    .caption {
+      color: #fff;
+      font-size: 18px;
+      padding: 10px;
       position: absolute;
       bottom: 0;
       width: 100%;
-      background: rgba(0,0,0,0.5);
-      color: white;
-      padding: 10px;
       text-align: center;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(2px);
+      border-radius: 0 0 12px 12px;
     }
-    
-    .slide-controls {
+    .prev, .next {
+      cursor: pointer;
       position: absolute;
       top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 20px;
       transform: translateY(-50%);
-    }
-    
-    .slide-btn {
-      background: rgba(0,0,0,0.5);
+      padding: 12px;
       color: white;
-      border: none;
-      width: 40px;
-      height: 40px;
+      font-weight: bold;
+      font-size: 20px;
+      background-color: rgba(0,0,0,0.3);
       border-radius: 50%;
+      user-select: none;
+      transition: 0.3s;
+      z-index: 100;
+    }
+    .next { right: 15px; }
+    .prev { left: 15px; }
+    .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+    .dot-container { 
+      text-align: center; 
+      margin-top: 12px; 
+      position: relative;
+      z-index: 10;
+    }
+    .dot {
       cursor: pointer;
-    }
-    
-    .slide-indicators {
-      text-align: center;
-      margin-top: 10px;
-    }
-    
-    .indicator {
-      display: inline-block;
-      width: 12px;
       height: 12px;
-      background: #ccc;
+      width: 12px;
+      margin: 0 4px;
+      background-color: #bbb;
       border-radius: 50%;
-      margin: 0 5px;
-      cursor: pointer;
+      display: inline-block;
+      transition: 0.6s;
     }
-    
-    .indicator.active {
-      background: #333;
-    }
+    .active, .dot:hover { background-color: #333; }
     
     /* === 项目网格样式 === */
     .projects-grid {
@@ -262,9 +253,6 @@ author_profile: true
       .map-container {
         flex-direction: column;
       }
-      .slideshow-wrapper {
-        height: 300px;
-      }
     }
     
     /* === 内容区域样式 === */
@@ -352,34 +340,23 @@ author_profile: true
     </div>
     <hr class="hr-double-arrow">
 
-<!-- 超级简化的幻灯片部分 -->
+    <!-- 幻灯片部分 -->
     <h1>📸 实验室展示</h1>
-    <div class="slideshow-section">
-      <div class="slideshow-wrapper">
-        <!-- 幻灯片1 -->
-        <div class="slide active" id="slide1">
-          <img src="../images/1280X1280.JPEG" alt="实验室布局" 
-               onerror="this.src='https://via.placeholder.com/800x450/4A90E2/FFFFFF?text=实验室布局'">
-          <div class="slide-caption">实验室布局</div>
-        </div>
-        
-        <!-- 幻灯片2 -->
-        <div class="slide" id="slide2">
-          <img src="../images/hezhao.jpg" alt="实验室合照" 
-               onerror="this.src='https://via.placeholder.com/800x450/50E3C2/FFFFFF?text=实验室合照'">
-          <div class="slide-caption">实验室合照</div>
-        </div>
-        
-        <div class="slide-controls">
-          <button class="slide-btn" onclick="prevSlide()">‹</button>
-          <button class="slide-btn" onclick="nextSlide()">›</button>
-        </div>
+    <div class="slideshow-container" id="slideshow">
+      <div class="mySlides fade">
+        <img src="../images/1280X1280.JPEG" alt="实验室布局" onerror="this.src='https://via.placeholder.com/800x450?text=实验室布局'">
+        <div class="caption">实验室布局</div>
       </div>
-      
-      <div class="slide-indicators">
-        <span class="indicator active" onclick="showSlide(0)"></span>
-        <span class="indicator" onclick="showSlide(1)"></span>
+      <div class="mySlides fade">
+        <img src="../images/hezhao.jpg" alt="实验室合照" onerror="this.src='https://via.placeholder.com/800x450?text=实验室合照'">
+        <div class="caption">实验室合照</div>
       </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
     </div>
 
     <hr class="hr-double-arrow">
@@ -559,57 +536,92 @@ author_profile: true
   <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
   <script>
-    // 超级简化的幻灯片逻辑
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const indicators = document.querySelectorAll('.indicator');
+    // 修复幻灯片功能
+    let slideIndex = 1;
+    let slideInterval;
     
-    console.log('找到的幻灯片数量:', slides.length);
-    console.log('找到的指示器数量:', indicators.length);
+    // 初始化幻灯片
+    document.addEventListener('DOMContentLoaded', function() {
+      showSlides(slideIndex);
+      startSlideShow();
+    });
     
-    function showSlide(n) {
-      console.log('切换到幻灯片:', n);
+    function plusSlides(n) {
+      clearInterval(slideInterval);
+      showSlides(slideIndex += n);
+      startSlideShow();
+    }
+
+    function currentSlide(n) {
+      clearInterval(slideInterval);
+      showSlides(slideIndex = n);
+      startSlideShow();
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
       
       // 隐藏所有幻灯片
-      slides.forEach(slide => {
-        slide.classList.remove('active');
-      });
-      
-      // 更新所有指示器
-      indicators.forEach(indicator => {
-        indicator.classList.remove('active');
-      });
-      
-      // 显示当前幻灯片和指示器
-      if (slides[n]) {
-        slides[n].classList.add('active');
-      }
-      if (indicators[n]) {
-        indicators[n].classList.add('active');
+      for (i = 0; i < slides.length; i++) {
+        if (slides[i]) {
+          slides[i].style.display = "none";  
+        }
       }
       
-      currentSlide = n;
+      // 移除所有点的active类
+      for (i = 0; i < dots.length; i++) {
+        if (dots[i]) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+      }
+      
+      // 显示当前幻灯片并激活对应的点
+      if (slides[slideIndex-1]) {
+        slides[slideIndex-1].style.display = "block";  
+      }
+      if (dots[slideIndex-1]) {
+        dots[slideIndex-1].className += " active";
+      }
     }
     
-    function nextSlide() {
-      console.log('下一张幻灯片');
-      let next = (currentSlide + 1) % slides.length;
-      showSlide(next);
+    function startSlideShow() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(() => {
+        plusSlides(1);
+      }, 5000);
     }
     
-    function prevSlide() {
-      console.log('上一张幻灯片');
-      let prev = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(prev);
+    // 回到顶部功能
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
     
-    // 自动播放
-    setInterval(nextSlide, 3000);
+    // 显示/隐藏回到顶部按钮
+    window.onscroll = function() {
+      const backToTopButton = document.querySelector('.back-to-top');
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
     
-    // 初始显示
+    // 图片加载失败处理
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('页面加载完成，初始化幻灯片');
-      showSlide(0);
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        img.onerror = function() {
+          this.src = 'https://via.placeholder.com/300x180?text=图片加载失败';
+        };
+      });
     });
   </script>
 </body>
