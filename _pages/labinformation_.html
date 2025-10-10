@@ -59,23 +59,16 @@ author_profile: true
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      background: #fff;
     }
     .mySlides { 
       display: none; 
       position: relative; 
-      animation: fade 1.5s ease-in-out;
-    }
-    @keyframes fade {
-      from {opacity: 0.4}
-      to {opacity: 1}
     }
     .mySlides img {
       width: 100%;
       height: 450px;
       object-fit: cover;
       border-radius: 12px;
-      display: block;
     }
     .caption {
       color: #fff;
@@ -102,17 +95,11 @@ author_profile: true
       border-radius: 50%;
       user-select: none;
       transition: 0.3s;
-      z-index: 100;
     }
     .next { right: 15px; }
     .prev { left: 15px; }
     .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-    .dot-container { 
-      text-align: center; 
-      margin-top: 12px; 
-      position: relative;
-      z-index: 10;
-    }
+    .dot-container { text-align: center; margin-top: 12px; }
     .dot {
       cursor: pointer;
       height: 12px;
@@ -291,29 +278,6 @@ author_profile: true
     .intro-text li {
       margin-bottom: 10px;
     }
-    
-    /* === 回到顶部按钮 === */
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #2c3e50;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      transition: all 0.3s;
-      z-index: 1000;
-      display: none;
-    }
-    .back-to-top:hover {
-      background: #34495e;
-      transform: translateY(-3px);
-    }
   </style>
 </head>
 
@@ -342,13 +306,13 @@ author_profile: true
 
     <!-- 幻灯片部分 -->
     <h1>📸 实验室展示</h1>
-    <div class="slideshow-container" id="slideshow">
+    <div class="slideshow-container">
       <div class="mySlides fade">
-        <img src="../images/1280X1280.JPEG" alt="实验室布局" onerror="this.src='https://via.placeholder.com/800x450?text=实验室布局'">
+        <img src="../images/1280X1280.JPEG" alt="实验室布局">
         <div class="caption">实验室布局</div>
       </div>
       <div class="mySlides fade">
-        <img src="../images/hezhao.jpg" alt="实验室合照" onerror="this.src='https://via.placeholder.com/800x450?text=实验室合照'">
+        <img src="../images/hezhao.jpg" alt="实验室合照">
         <div class="caption">实验室合照</div>
       </div>
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -365,37 +329,37 @@ author_profile: true
     <h1>研究项目展示</h1>
     <div class="projects-grid">
       <div class="project-item">
-        <img src="../images/Xbot实验平台.jpg" alt="具身智能框架MLerobot" onerror="this.src='https://via.placeholder.com/300x180?text=项目图片'">
+        <img src="../images/Xbot实验平台.jpg" alt="具身智能框架MLerobot">
         <div class="title">具身智能框架MLerobot</div>
         <div class="description">该框架基于huggingface开源框架Lerobot框架研发，结合Mbot实验室的实验设备和算法研发，针对多种异构机器人进行了适配，能够快速生产统一格式具身数据集，集成模仿学习、强化学习、传统运动控制算法，能够快速进行模型训练、仿真验证和真机部署。</div>
       </div>
 
       <div class="project-item">
-        <img src="../images/dog.jpg" alt="Xdog带臂机器狗平台" onerror="this.src='https://via.placeholder.com/300x180?text=项目图片'">
+        <img src="../images/dog.jpg" alt="Xdog带臂机器狗平台">
         <div class="title">Xdog带臂机器狗平台</div>
         <div class="description">该平台基于低成本机器狗和机械臂硬件平台，主打具身智能教育培训和家庭陪伴服务市场，以模仿学习和强化学习作为硬件平台的算法灵魂，打造一个好玩、易学、好交互的智能机器狗。</div>
       </div>
 
       <div class="project-item">
-        <img src="../images/ziyan.jpg" alt="自研星触机械臂" onerror="this.src='https://via.placeholder.com/300x180?text=项目图片'">
+        <img src="../images/ziyan.jpg" alt="自研星触机械臂">
         <div class="title">自研星触机械臂</div>
         <div class="description">Mbot实验室星触项目团队自主研发具身智能机械臂套件，这是一款面向科研与教育的六自由度操作臂平台。自主研发、高精度、开放接口；从课堂到实验室，从模仿学习到大模型控制（VLA），让具身智能触手可及。</div>
       </div>
 
       <div class="project-item">
-        <img src="../images/fangzhou.jpg" alt="方舟无限+VR摇操平台" onerror="this.src='https://via.placeholder.com/300x180?text=项目图片'">
+        <img src="../images/fangzhou.jpg" alt="方舟无限+VR摇操平台">
         <div class="title">方舟无限+VR摇操平台</div>
         <div class="description">采用方舟无限机械臂配合PICO4进行VR摇操采集数据</div>
       </div>
 
       <div class="project-item">
-        <img src="../images/linkerhand.jpg" alt="灵巧手研究平台" onerror="this.src='https://via.placeholder.com/300x180?text=项目图片'">
+        <img src="../images/linkerhand.jpg" alt="灵巧手研究平台">
         <div class="title">灵巧手研究平台</div>
         <div class="description">采用linkhand进行灵巧手通用平台</div>
       </div>
 
       <div class="project-item">
-        <img src="../images/vln.jpg" alt="视觉语言导航" onerror="this.src='https://via.placeholder.com/300x180?text=项目图片'">
+        <img src="../images/vln.jpg" alt="视觉语言导航">
         <div class="title">视觉语言导航</div>
         <div class="description">研究前沿的视觉语言导航算法，推动机器智能体的发展</div>
       </div>
@@ -532,97 +496,39 @@ author_profile: true
     </div>
   </div>
 
-  <!-- 回到顶部按钮 -->
-  <button class="back-to-top" onclick="scrollToTop()">↑</button>
-
   <script>
-    // 修复幻灯片功能
+    // 幻灯片功能
     let slideIndex = 1;
-    let slideInterval;
-    
-    // 初始化幻灯片
-    document.addEventListener('DOMContentLoaded', function() {
-      showSlides(slideIndex);
-      startSlideShow();
-    });
-    
+    showSlides(slideIndex);
+
     function plusSlides(n) {
-      clearInterval(slideInterval);
       showSlides(slideIndex += n);
-      startSlideShow();
     }
 
     function currentSlide(n) {
-      clearInterval(slideInterval);
       showSlides(slideIndex = n);
-      startSlideShow();
     }
 
     function showSlides(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
-      
       if (n > slides.length) {slideIndex = 1}    
       if (n < 1) {slideIndex = slides.length}
-      
-      // 隐藏所有幻灯片
       for (i = 0; i < slides.length; i++) {
-        if (slides[i]) {
-          slides[i].style.display = "none";  
-        }
+        slides[i].style.display = "none";  
       }
-      
-      // 移除所有点的active类
       for (i = 0; i < dots.length; i++) {
-        if (dots[i]) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
+        dots[i].className = dots[i].className.replace(" active", "");
       }
-      
-      // 显示当前幻灯片并激活对应的点
-      if (slides[slideIndex-1]) {
-        slides[slideIndex-1].style.display = "block";  
-      }
-      if (dots[slideIndex-1]) {
-        dots[slideIndex-1].className += " active";
-      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
     }
     
-    function startSlideShow() {
-      clearInterval(slideInterval);
-      slideInterval = setInterval(() => {
-        plusSlides(1);
-      }, 5000);
-    }
-    
-    // 回到顶部功能
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-    
-    // 显示/隐藏回到顶部按钮
-    window.onscroll = function() {
-      const backToTopButton = document.querySelector('.back-to-top');
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    };
-    
-    // 图片加载失败处理
-    document.addEventListener('DOMContentLoaded', function() {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        img.onerror = function() {
-          this.src = 'https://via.placeholder.com/300x180?text=图片加载失败';
-        };
-      });
-    });
+    // 自动播放幻灯片
+    setInterval(() => {
+      plusSlides(1);
+    }, 5000);
   </script>
 </body>
 </html>
