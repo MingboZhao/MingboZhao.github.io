@@ -51,68 +51,7 @@ author_profile: true
       transform: rotate(135deg);
       right: -20px;
     }
-    
-    /* === 幻灯片样式 === */
-    .slideshow-container {
-      max-width: 800px;
-      position: relative;
-      margin: 40px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-    .mySlides { 
-      display: none; 
-      position: relative; 
-    }
-    .mySlides img {
-      width: 100%;
-      height: 450px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .caption {
-      color: #fff;
-      font-size: 18px;
-      padding: 10px;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(2px);
-      border-radius: 0 0 12px 12px;
-    }
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 12px;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      background-color: rgba(0,0,0,0.3);
-      border-radius: 50%;
-      user-select: none;
-      transition: 0.3s;
-    }
-    .next { right: 15px; }
-    .prev { left: 15px; }
-    .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-    .dot-container { text-align: center; margin-top: 12px; }
-    .dot {
-      cursor: pointer;
-      height: 12px;
-      width: 12px;
-      margin: 0 4px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: 0.6s;
-    }
-    .active, .dot:hover { background-color: #333; }
-    
+      
     /* === 项目网格样式 === */
     .projects-grid {
       display: grid;
@@ -236,7 +175,7 @@ author_profile: true
 
   <!-- 修改后的幻灯片部分 -->
   <div class="slideshow-section" style="max-width: 800px; margin: 40px auto; position: relative;">
-    <div style="position:relative;width:100%;height:400px;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+  <div style="position:relative;width:100%;max-height:450px;height:auto;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
       <div id="slide1" style="position:absolute;width:100%;height:100%;">
         <img src="../images/1280X1280.JPEG" style="width:100%;height:100%;object-fit:cover;">
         <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
