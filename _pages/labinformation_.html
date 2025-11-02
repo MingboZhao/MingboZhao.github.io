@@ -145,11 +145,107 @@ author_profile: true
     }
     h4 { margin-top: 15px; }
     
+    /* === 幻灯片样式 === */
+    .slideshow-section {
+      max-width: 800px;
+      margin: 40px auto;
+      position: relative;
+    }
+    .slides-container {
+      position: relative;
+      width: 100%;
+      max-height: 450px;
+      height: auto;
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .slide-caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 10;
+    }
+    .nav-button:hover {
+      background: rgba(0,0,0,0.8);
+      transform: translateY(-50%) scale(1.1);
+    }
+    .prev {
+      left: 15px;
+    }
+    .next {
+      right: 15px;
+    }
+    .indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      gap: 10px;
+    }
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .indicator.active {
+      background-color: #3498db;
+      transform: scale(1.2);
+    }
+    .keyboard-hint {
+      text-align: center;
+      margin-top: 10px;
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+    
     /* === 响应式设计 === */
     @media (max-width: 600px) {
       .projects-grid,
       .project-videos {
         grid-template-columns: 1fr;
+      }
+      .nav-button {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
       }
     }
   </style>
@@ -176,40 +272,40 @@ author_profile: true
     
   <!-- 幻灯片部分 -->
   <h1 style="text-align:center; margin-bottom:40px;">📸 实验室展示</h1>
-  <!-- 修改后的幻灯片部分 -->
-  <div class="slideshow-section" style="max-width: 800px; margin: 40px auto; position: relative;">
-  <div style="position:relative;width:100%;max-height:450px;height:auto;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-      <div id="slide1" style="position:absolute;width:100%;height:100%;">
-        <img src="../images/1280X1280.JPEG" style="width:100%;height:100%;object-fit:cover;">
-        <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
-          实验室布局
-        </div>
+  <div class="slideshow-section">
+    <div class="slides-container">
+      <!-- 第一张幻灯片 -->
+      <div class="slide active" id="slide1">
+        <img src="../images/1280X1280.JPEG" alt="实验室布局">
+        <div class="slide-caption">实验室布局</div>
       </div>
-      <div id="slide2" style="position:absolute;width:100%;height:100%;display:none;">
-        <img src="../images/hezhao.jpg" style="width:100%;height:100%;object-fit:cover;">
-        <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
-          实验室合照
-        </div>
+      
+      <!-- 第二张幻灯片 -->
+      <div class="slide" id="slide2">
+        <img src="../images/hezhao.jpg" alt="实验室合照">
+        <div class="slide-caption">实验室合照</div>
       </div>
-      <div id="slide3" style="position:absolute;width:100%;height:100%;display:none;">
-        <img src="../images/rosconference.jpg" style="width:100%;height:100%;object-fit:cover;">
-        <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
-          实验室代表王彦栋参加ROSCON 2025 China开发者大会并做精彩报告
-        </div>
+      
+      <!-- 第三张幻灯片 -->
+      <div class="slide" id="slide3">
+        <img src="../images/rosconference.jpg" alt="学术报告">
+        <div class="slide-caption">实验室代表王彦栋参加ROSCON 2025 China开发者大会并做精彩报告</div>
       </div>
-    
-      <!-- 上一张按钮 -->
-      <button onclick="document.getElementById('slide1').style.display='block';document.getElementById('slide2').style.display='none';" 
-              style="position:absolute;left:15px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:white;border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;transition:all 0.3s;">
-        ❮
-      </button>
-    
-      <!-- 下一张按钮 -->
-      <button onclick="document.getElementById('slide1').style.display='none';document.getElementById('slide2').style.display='block';" 
-              style="position:absolute;right:15px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:white;border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;transition:all 0.3s;">
-        ❯
-      </button>
+      
+      <!-- 导航按钮 -->
+      <button class="nav-button prev" onclick="changeSlide(-1)">❮</button>
+      <button class="nav-button next" onclick="changeSlide(1)">❯</button>
     </div>
+    
+    <!-- 指示器 -->
+    <div class="indicators">
+      <span class="indicator active" onclick="goToSlide(0)"></span>
+      <span class="indicator" onclick="goToSlide(1)"></span>
+      <span class="indicator" onclick="goToSlide(2)"></span>
+    </div>
+    
+    <!-- 键盘提示 -->
+    <div class="keyboard-hint">使用键盘左右箭头键也可以切换幻灯片</div>
   </div>
   <hr class="hr-double-arrow">
 
@@ -406,17 +502,72 @@ author_profile: true
   </div>
 
   <script>
-  // 添加按钮悬停效果
-  document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('mouseenter', function() {
-      this.style.background = 'rgba(0,0,0,0.8)';
-      this.style.transform = 'translateY(-50%) scale(1.1)';
+    // 幻灯片功能
+    let currentSlide = 0;
+    const totalSlides = 3;
+    
+    // 切换幻灯片
+    function changeSlide(direction) {
+      // 隐藏当前幻灯片
+      document.querySelectorAll('.slide')[currentSlide].classList.remove('active');
+      document.querySelectorAll('.indicator')[currentSlide].classList.remove('active');
+      
+      // 计算新幻灯片索引
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      
+      // 显示新幻灯片
+      document.querySelectorAll('.slide')[currentSlide].classList.add('active');
+      document.querySelectorAll('.indicator')[currentSlide].classList.add('active');
+    }
+    
+    // 跳转到指定幻灯片
+    function goToSlide(index) {
+      document.querySelectorAll('.slide')[currentSlide].classList.remove('active');
+      document.querySelectorAll('.indicator')[currentSlide].classList.remove('active');
+      
+      currentSlide = index;
+      
+      document.querySelectorAll('.slide')[currentSlide].classList.add('active');
+      document.querySelectorAll('.indicator')[currentSlide].classList.add('active');
+    }
+    
+    // 键盘导航
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'ArrowLeft') {
+        changeSlide(-1);
+      } else if (event.key === 'ArrowRight') {
+        changeSlide(1);
+      }
     });
-    button.addEventListener('mouseleave', function() {
-      this.style.background = 'rgba(0,0,0,0.6)';
-      this.style.transform = 'translateY(-50%) scale(1)';
+    
+    // 自动播放（可选）
+    let slideInterval = setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+    
+    // 鼠标悬停时暂停自动播放
+    document.querySelector('.slides-container').addEventListener('mouseenter', () => {
+      clearInterval(slideInterval);
     });
-  });
+    
+    // 鼠标离开时恢复自动播放
+    document.querySelector('.slides-container').addEventListener('mouseleave', () => {
+      slideInterval = setInterval(() => {
+        changeSlide(1);
+      }, 5000);
+    });
+
+    // 添加按钮悬停效果
+    document.querySelectorAll('.nav-button').forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        this.style.background = 'rgba(0,0,0,0.8)';
+        this.style.transform = 'translateY(-50%) scale(1.1)';
+      });
+      button.addEventListener('mouseleave', function() {
+        this.style.background = 'rgba(0,0,0,0.6)';
+        this.style.transform = 'translateY(-50%) scale(1)';
+      });
+    });
   </script>
 </body>
 </html>
