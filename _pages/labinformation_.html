@@ -21,6 +21,91 @@ author_profile: true
       padding: 40px;
     }
     
+    /* === 幻灯片样式 (新增部分) === */
+    .slider-wrapper {
+        position: relative;
+        max-width: 800px;
+        width: 90%;
+        aspect-ratio: 16/9;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        overflow: hidden;
+        margin: 20px auto; /* 关键：让幻灯片水平居中 */
+    }
+
+    .slides-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none; 
+        -ms-overflow-style: none;
+    }
+    .slides-container::-webkit-scrollbar { display: none; }
+
+    .slide {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: center;
+        position: relative;
+        background-color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 16px;
+        z-index: 2;
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 24px;
+        color: #333;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+    }
+
+    .nav-btn:hover { background: white; transform: translateY(-50%) scale(1.1); }
+    .nav-btn:active { transform: translateY(-50%) scale(0.95); }
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
     /* === 分隔线样式 === */
     .hr-double-arrow {
       color: #d0d0d5;
@@ -158,104 +243,50 @@ author_profile: true
 <body>
   <!-- 实验室介绍 -->
   <hr class="hr-double-arrow">
-  <h1 style="text-align:center; margin-bottom:40px;">📸 实验室展示</h1>
+  <h1 style="text-align:center; margin-bottom:40px;">📸 实验室风采展示</h1>
 
-  <div class="slideshow-section" style="max-width: 800px; margin: 40px auto; position: relative;">
-  <div style="position:relative;width:100%;max-height:450px;height:auto;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+    <div class="slider-wrapper">
+        <button class="nav-btn prev" onclick="scrollSlider(-1)">❮</button>
+        <button class="nav-btn next" onclick="scrollSlider(1)">❯</button>
 
-    <div class="mySlides" style="display:block; width:100%; height:100%;">
-      <img src="../images/1280X1280.JPEG" style="width:100%;height:100%;object-fit:cover;">
-      <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
-        实验室布局
-      </div>
+        <div class="slides-container" id="slider">
+            
+            <!-- 第 1 张 -->
+            <div class="slide">
+                <!-- 注意：上传到 GitHub 时，请把下面的 src 改回 "images/1280X1280.JPEG" -->
+                <img src="../images/1280X1280.JPEG" alt="实验室布局">
+                <div class="caption">1. 实验室整体布局</div>
+            </div>
+
+            <!-- 第 2 张 -->
+            <div class="slide">
+                <!-- 注意：上传到 GitHub 时，请把下面的 src 改回 "images/hezhao.jpg" -->
+                <img src="../images/hezhao.jpg" alt="团队合照">
+                <div class="caption">2. 团队大合照</div>
+            </div>
+
+            <!-- 第 3 张 -->
+            <div class="slide">
+                <!-- 注意：上传到 GitHub 时，请把下面的 src 改回 "images/example.jpg" -->
+                <img src="../images/1280X1280.JPEG" alt="项目演示">
+                <div class="caption">3. 科研项目演示</div>
+            </div>
+
+        </div>
     </div>
 
-    <div class="mySlides" style="display:none; width:100%; height:100%;">
-      <img src="../images/hezhao.jpg" style="width:100%;height:100%;object-fit:cover;">
-      <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
-        实验室合照
-      </div>
-    </div>
+    <p style="margin-top:20px; color:#666; text-align:center;">您可以点击箭头，也可以在手机上左右滑动。</p>
 
-    <div class="mySlides" style="display:none; width:100%; height:100%;">
-      <img src="../images/1280X1280.JPEG" style="width:100%;height:100%;object-fit:cover;">
-      <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
-        未来规划
-      </div>
-    </div>
-
-    <button id="prevBtn" class="slide-btn"
-            style="position:absolute;left:15px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:white;border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;transition:all 0.3s; z-index:999;">
-      ❮
-    </button>
-  
-    <button id="nextBtn" class="slide-btn"
-            style="position:absolute;right:15px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:white;border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;transition:all 0.3s; z-index:999;">
-      ❯
-    </button>
-    
-  </div>
-  </div>
-  <script>
-  // 使用立即执行函数，避免变量污染
-  (function() {
-    console.log("幻灯片脚本开始执行..."); // 如果控制台没看到这句话，说明脚本没跑起来
-
-    var slideIndex = 1;
-    var slides = document.getElementsByClassName("mySlides");
-    var prevBtn = document.getElementById("prevBtn_unique");
-    var nextBtn = document.getElementById("nextBtn_unique");
-
-    // 1. 先初始化显示
-    showSlides(slideIndex);
-
-    // 2. 绑定点击事件 (简单粗暴版)
-    if (prevBtn) {
-        prevBtn.onclick = function() { plusSlides(-1); };
-        console.log("上一张按钮绑定成功");
-    } else {
-        console.error("找不到上一张按钮！");
-    }
-
-    if (nextBtn) {
-        nextBtn.onclick = function() { plusSlides(1); };
-        console.log("下一张按钮绑定成功");
-    } else {
-        console.error("找不到下一张按钮！");
-    }
-
-    // 3. 逻辑函数
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-      if (!slides || slides.length === 0) return;
-      
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slides[slideIndex-1].style.display = "block";  
-    }
-
-    // 4. 悬停特效
-    var btns = document.querySelectorAll('.slide-btn');
-    btns.forEach(function(btn) {
-        btn.onmouseenter = function() {
-            this.style.background = 'rgba(0,0,0,0.8)';
-            this.style.transform = 'translateY(-50%) scale(1.1)';
-        };
-        btn.onmouseleave = function() {
-            this.style.background = 'rgba(0,0,0,0.6)';
-            this.style.transform = 'translateY(-50%) scale(1)';
-        };
-    });
-
-  })();
-  </script>
+    <script>
+        function scrollSlider(direction) {
+            const slider = document.getElementById('slider');
+            const slideWidth = slider.clientWidth;
+            slider.scrollBy({
+                left: direction * slideWidth,
+                behavior: 'smooth'
+            });
+        }
+    </script>
   <hr class="hr-double-arrow">
 
   <!-- 研究项目展示 -->
