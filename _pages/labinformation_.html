@@ -196,6 +196,63 @@ author_profile: true
     
   </div>
   </div>
+  <script>
+  // 使用监听器确保页面加载完成后再执行，避免找不到元素
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // 核心修复：通过 ID 获取按钮，并用 JS 绑定点击事件
+    // 这样就不需要 HTML 里写 onclick 了，彻底解决 "ReferenceError"
+    const prevButton = document.getElementById('prevBtn');
+    const nextButton = document.getElementById('nextBtn');
+
+    if (prevButton) {
+        prevButton.addEventListener('click', function() {
+            plusSlides(-1);
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            plusSlides(1);
+        });
+    }
+
+    // 翻页逻辑函数
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (!slides || slides.length === 0) return; // 安全检查
+
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+    }
+
+    // 按钮悬停特效 (保持原来的美观效果)
+    document.querySelectorAll('.slide-btn').forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        this.style.background = 'rgba(0,0,0,0.8)';
+        this.style.transform = 'translateY(-50%) scale(1.1)';
+      });
+      button.addEventListener('mouseleave', function() {
+        this.style.background = 'rgba(0,0,0,0.6)';
+        this.style.transform = 'translateY(-50%) scale(1)';
+      });
+    });
+
+  });
+  </script>
   <hr class="hr-double-arrow">
 
   <!-- 研究项目展示 -->
@@ -390,62 +447,5 @@ author_profile: true
     </div>
   </div>
 
-  <script>
-  // 使用监听器确保页面加载完成后再执行，避免找不到元素
-  document.addEventListener('DOMContentLoaded', function() {
-    
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    // 核心修复：通过 ID 获取按钮，并用 JS 绑定点击事件
-    // 这样就不需要 HTML 里写 onclick 了，彻底解决 "ReferenceError"
-    const prevButton = document.getElementById('prevBtn');
-    const nextButton = document.getElementById('nextBtn');
-
-    if (prevButton) {
-        prevButton.addEventListener('click', function() {
-            plusSlides(-1);
-        });
-    }
-
-    if (nextButton) {
-        nextButton.addEventListener('click', function() {
-            plusSlides(1);
-        });
-    }
-
-    // 翻页逻辑函数
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      if (!slides || slides.length === 0) return; // 安全检查
-
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slides[slideIndex-1].style.display = "block";  
-    }
-
-    // 按钮悬停特效 (保持原来的美观效果)
-    document.querySelectorAll('.slide-btn').forEach(button => {
-      button.addEventListener('mouseenter', function() {
-        this.style.background = 'rgba(0,0,0,0.8)';
-        this.style.transform = 'translateY(-50%) scale(1.1)';
-      });
-      button.addEventListener('mouseleave', function() {
-        this.style.background = 'rgba(0,0,0,0.6)';
-        this.style.transform = 'translateY(-50%) scale(1)';
-      });
-    });
-
-  });
-  </script>
 </body>
 </html>
