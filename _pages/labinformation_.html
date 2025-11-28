@@ -158,52 +158,42 @@ author_profile: true
 <body>
   <!-- 实验室介绍 -->
   <hr class="hr-double-arrow">
-  <h1 style="text-align:center; margin-bottom:40px;">🏛️ 实验室介绍</h1>
-  <p>欢迎来到 Mbot具身智能实验室！</p>
-  <ul>
-    <li>Mbot实验室依托东华大学信息与智能科学学院，于2025年1月成立，实验室位于东华大学松江校区2号学院楼226室。</li>
-    <li>实验室专注于具身智能领域的基础理论、前沿技术与创新应用研究，研究方向涵盖但不限于模仿学习、视觉-语言-动作模型、视觉语言导航等，致力于推动机器智能体在感知、理解与行动方面的发展。</li>
-    <li>欢迎对具身智能感兴趣的师生加入我们！</li>
-  </ul>
-  <hr class="hr-double-arrow">
-  <p>Welcome to the Mbot Embodied Intelligence Laboratory!</p>
-  <ul>
-    <li>The Mbot Lab, affiliated with the School of Information and Intelligent Science at Donghua University, was established in January 2025 and is located in Room 226, Building 2. </li>
-    <li>Our laboratory focuses on fundamental theories, cutting-edge technologies, and innovative applications in the field of embodied intelligence. The research areas include, but are not limited to, imitation learning, vision-language-action models, and vision-language navigation. </li>
-    <li>We are committed to advancing the integrated development of perception, understanding, and action in intelligent agents. We warmly welcome students and researchers who are interested in embodied intelligence to join us!</li>
-  </ul>  
-  <hr class="hr-double-arrow">
-    
-  <!-- 幻灯片部分 -->
   <h1 style="text-align:center; margin-bottom:40px;">📸 实验室展示</h1>
-  <!-- 修改后的幻灯片部分 -->
   <div class="slideshow-section" style="max-width: 800px; margin: 40px auto; position: relative;">
   <div style="position:relative;width:100%;max-height:450px;height:auto;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-      <div id="slide1" style="position:absolute;width:100%;height:100%;">
-        <img src="../images/1280X1280.JPEG" style="width:100%;height:100%;object-fit:cover;">
-        <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
-          实验室布局
-        </div>
+
+    <div class="mySlides" style="display:block; width:100%; height:100%;">
+      <img src="../images/1280X1280.JPEG" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
+        实验室布局
       </div>
-      <div id="slide2" style="position:absolute;width:100%;height:100%;display:none;">
-        <img src="../images/hezhao.jpg" style="width:100%;height:100%;object-fit:cover;">
-        <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
-          实验室合照
-        </div>
-      </div>
-    
-      <!-- 上一张按钮 -->
-      <button onclick="document.getElementById('slide1').style.display='block';document.getElementById('slide2').style.display='none';" 
-              style="position:absolute;left:15px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:white;border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;transition:all 0.3s;">
-        ❮
-      </button>
-    
-      <!-- 下一张按钮 -->
-      <button onclick="document.getElementById('slide1').style.display='none';document.getElementById('slide2').style.display='block';" 
-              style="position:absolute;right:15px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:white;border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;transition:all 0.3s;">
-        ❯
-      </button>
     </div>
+
+    <div class="mySlides" style="display:none; width:100%; height:100%;">
+      <img src="../images/hezhao.jpg" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
+        实验室合照
+      </div>
+    </div>
+
+    <div class="mySlides" style="display:none; width:100%; height:100%;">
+      <img src="你的图片路径.jpg" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:white;text-align:center;padding:10px;font-size:16px;">
+        这里写图片描述
+      </div>
+    </div>
+
+    <button class="slide-btn" onclick="plusSlides(-1)" 
+            style="position:absolute;left:15px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:white;border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;transition:all 0.3s; z-index:10;">
+      ❮
+    </button>
+  
+    <button class="slide-btn" onclick="plusSlides(1)" 
+            style="position:absolute;right:15px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:white;border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;transition:all 0.3s; z-index:10;">
+      ❯
+    </button>
+    
+  </div>
   </div>
   <hr class="hr-double-arrow">
 
@@ -400,15 +390,35 @@ author_profile: true
   </div>
 
   <script>
-  // 添加按钮悬停效果
-  document.querySelectorAll('button').forEach(button => {
+  // --- 功能部分：切换图片逻辑 ---
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slides[slideIndex-1].style.display = "block";  
+  }
+
+  // --- 特效部分：按钮悬停效果 ---
+  // 这里改为只获取 class="slide-btn" 的按钮，更加安全
+  document.querySelectorAll('.slide-btn').forEach(button => {
     button.addEventListener('mouseenter', function() {
       this.style.background = 'rgba(0,0,0,0.8)';
-      this.style.transform = 'translateY(-50%) scale(1.1)';
+      this.style.transform = 'translateY(-50%) scale(1.1)'; // 保持垂直居中并放大
     });
     button.addEventListener('mouseleave', function() {
       this.style.background = 'rgba(0,0,0,0.6)';
-      this.style.transform = 'translateY(-50%) scale(1)';
+      this.style.transform = 'translateY(-50%) scale(1)';   // 恢复原状
     });
   });
   </script>
